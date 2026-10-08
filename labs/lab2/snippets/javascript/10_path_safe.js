@@ -1,0 +1,1 @@
+app.get('/f',(req,res)=>{const fs=require('fs'); const name=req.query.n; if(!/^[\w\-.]+$/.test(name)) return res.status(400).end(); res.send(fs.readFileSync(`safe/${name}`,'utf8'));});

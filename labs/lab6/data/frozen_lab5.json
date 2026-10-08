@@ -1,0 +1,13 @@
+{
+  "description": "Accepted Lab 5 experiment. Do not rewrite, specialize or copy per model.",
+  "sha256": {
+    "labs/lab5/src/arena.py": "0e43c075c9ee3833484314f7a77eb9b593dc0e23045e6127c18621bb5a5109f5",
+    "labs/lab5/src/run_arena.py": "db5e0a24291d3513df79199aac21794eef20f153f85736226cdf4e788404e708",
+    "labs/lab5/data/offline_responses.json": "0a78b5dd8c7f8f99c838032b9e9c89d9042dcff6deae768b6fa7f2d140b82706",
+    "labs/lab5/data/promptfoo_cases.yaml": "29e4e4197197a596dfa6591c5e796f54f47eaf0bfb1e660dc1d3ee048a2a0511",
+    "labs/lab5/data/response_schema.json": "b2a422cb5c45bc712a82a33fb8636f6d051cd4a608f0d31c9a4b616739bf3c71",
+    "labs/lab5/data/result_schema.json": "d33b005fbf6648cc10de081368f22e897397e588c4afc1cc284b39d9f4752b53",
+    "labs/lab5/data/scenarios.yaml": "e41dfb1c6e557c27641d90653185eb27b68aaecf6f2a833378d997910bed5e53",
+    "course_llm/client.py": "0cfbc04042b77ca5753438a1dea934580e1920adf2d42f1f1787476663a9bcb2"
+  }
+}

@@ -1,0 +1,15 @@
+
+rules:
+  - id: docker-avoid-latest
+    languages: [dockerfile]
+    message: Avoid 'latest' tag; pin a digest or version.
+    patterns:
+      - pattern: FROM $IMAGE:latest
+    severity: WARNING
+
+  - id: k8s-no-privileged
+    languages: [yaml]
+    message: Kubernetes container should not run privileged.
+    pattern-either:
+      - pattern: "privileged: true"
+    severity: ERROR

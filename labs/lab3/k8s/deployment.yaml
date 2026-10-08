@@ -1,0 +1,23 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo
+  template:
+    metadata:
+      labels:
+        app: demo
+    spec:
+      containers:
+      - name: web
+        image: nginx:latest  # floating tag
+        securityContext:
+          privileged: true
+          allowPrivilegeEscalation: true
+        ports:
+        - containerPort: 80

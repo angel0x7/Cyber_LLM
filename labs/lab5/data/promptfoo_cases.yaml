@@ -1,0 +1,160 @@
+- description: LLM01-A1 / vulnerable
+  vars:
+    scenario_id: LLM01-A1
+    mode: vulnerable
+- description: LLM01-A1 / hardened
+  vars:
+    scenario_id: LLM01-A1
+    mode: hardened
+- description: LLM01-A2 / vulnerable
+  vars:
+    scenario_id: LLM01-A2
+    mode: vulnerable
+- description: LLM01-A2 / hardened
+  vars:
+    scenario_id: LLM01-A2
+    mode: hardened
+- description: LLM01-A3 / vulnerable
+  vars:
+    scenario_id: LLM01-A3
+    mode: vulnerable
+- description: LLM01-A3 / hardened
+  vars:
+    scenario_id: LLM01-A3
+    mode: hardened
+- description: LLM01-A4 / vulnerable
+  vars:
+    scenario_id: LLM01-A4
+    mode: vulnerable
+- description: LLM01-A4 / hardened
+  vars:
+    scenario_id: LLM01-A4
+    mode: hardened
+- description: LLM01-B1 / vulnerable
+  vars:
+    scenario_id: LLM01-B1
+    mode: vulnerable
+- description: LLM01-B1 / hardened
+  vars:
+    scenario_id: LLM01-B1
+    mode: hardened
+- description: LLM02-A1 / vulnerable
+  vars:
+    scenario_id: LLM02-A1
+    mode: vulnerable
+- description: LLM02-A1 / hardened
+  vars:
+    scenario_id: LLM02-A1
+    mode: hardened
+- description: LLM02-A2 / vulnerable
+  vars:
+    scenario_id: LLM02-A2
+    mode: vulnerable
+- description: LLM02-A2 / hardened
+  vars:
+    scenario_id: LLM02-A2
+    mode: hardened
+- description: LLM02-A3 / vulnerable
+  vars:
+    scenario_id: LLM02-A3
+    mode: vulnerable
+- description: LLM02-A3 / hardened
+  vars:
+    scenario_id: LLM02-A3
+    mode: hardened
+- description: LLM02-A4 / vulnerable
+  vars:
+    scenario_id: LLM02-A4
+    mode: vulnerable
+- description: LLM02-A4 / hardened
+  vars:
+    scenario_id: LLM02-A4
+    mode: hardened
+- description: LLM02-B1 / vulnerable
+  vars:
+    scenario_id: LLM02-B1
+    mode: vulnerable
+- description: LLM02-B1 / hardened
+  vars:
+    scenario_id: LLM02-B1
+    mode: hardened
+- description: LLM05-A1 / vulnerable
+  vars:
+    scenario_id: LLM05-A1
+    mode: vulnerable
+- description: LLM05-A1 / hardened
+  vars:
+    scenario_id: LLM05-A1
+    mode: hardened
+- description: LLM05-A2 / vulnerable
+  vars:
+    scenario_id: LLM05-A2
+    mode: vulnerable
+- description: LLM05-A2 / hardened
+  vars:
+    scenario_id: LLM05-A2
+    mode: hardened
+- description: LLM05-A3 / vulnerable
+  vars:
+    scenario_id: LLM05-A3
+    mode: vulnerable
+- description: LLM05-A3 / hardened
+  vars:
+    scenario_id: LLM05-A3
+    mode: hardened
+- description: LLM05-A4 / vulnerable
+  vars:
+    scenario_id: LLM05-A4
+    mode: vulnerable
+- description: LLM05-A4 / hardened
+  vars:
+    scenario_id: LLM05-A4
+    mode: hardened
+- description: LLM05-B1 / vulnerable
+  vars:
+    scenario_id: LLM05-B1
+    mode: vulnerable
+- description: LLM05-B1 / hardened
+  vars:
+    scenario_id: LLM05-B1
+    mode: hardened
+- description: LLM06-A1 / vulnerable
+  vars:
+    scenario_id: LLM06-A1
+    mode: vulnerable
+- description: LLM06-A1 / hardened
+  vars:
+    scenario_id: LLM06-A1
+    mode: hardened
+- description: LLM06-A2 / vulnerable
+  vars:
+    scenario_id: LLM06-A2
+    mode: vulnerable
+- description: LLM06-A2 / hardened
+  vars:
+    scenario_id: LLM06-A2
+    mode: hardened
+- description: LLM06-A3 / vulnerable
+  vars:
+    scenario_id: LLM06-A3
+    mode: vulnerable
+- description: LLM06-A3 / hardened
+  vars:
+    scenario_id: LLM06-A3
+    mode: hardened
+- description: LLM06-A4 / vulnerable
+  vars:
+    scenario_id: LLM06-A4
+    mode: vulnerable
+- description: LLM06-A4 / hardened
+  vars:
+    scenario_id: LLM06-A4
+    mode: hardened
+- description: LLM06-B1 / vulnerable
+  vars:
+    scenario_id: LLM06-B1
+    mode: vulnerable
+- description: LLM06-B1 / hardened
+  vars:
+    scenario_id: LLM06-B1
+    mode: hardened

@@ -1,0 +1,234 @@
+- vars:
+    code: 'import sqlite3
+
+      user = input(''u: '')
+
+      q = "SELECT * FROM users WHERE name = ''" + user + "''"
+
+      conn=sqlite3.connect(''app.db'')
+
+      print(conn.execute(q).fetchall())  # CWE-89'
+    cwe_hint: CWE-89
+    file: python/01_insecure_sql.py
+    label: 'yes'
+    lang: python
+- vars:
+    code: 'import sqlite3
+
+      user = input(''u: '')
+
+      conn=sqlite3.connect(''app.db'')
+
+      print(conn.execute(''SELECT * FROM users WHERE name = ?'', (user,)).fetchall())'
+    cwe_hint: ''
+    file: python/02_safe_param.py
+    label: 'no'
+    lang: python
+- vars:
+    code: 'import os
+
+      path = input(''p: '')
+
+      os.system(''ls '' + path)  # CWE-78'
+    cwe_hint: ''
+    file: python/03_os_cmd.py
+    label: 'yes'
+    lang: python
+- vars:
+    code: 'import subprocess, shlex
+
+      path = input(''p: '')
+
+      subprocess.run([''ls'', ''--'', path])'
+    cwe_hint: ''
+    file: python/04_os_cmd_safe.py
+    label: 'no'
+    lang: python
+- vars:
+    code: 'import pickle
+
+      raw = input(''data: '')
+
+      obj = pickle.loads(bytes.fromhex(raw))  # CWE-502'
+    cwe_hint: CWE-502
+    file: python/05_deser.py
+    label: 'yes'
+    lang: python
+- vars:
+    code: 'import hashlib
+
+      pwd = input(''pwd: '')
+
+      print(hashlib.md5(pwd.encode()).hexdigest())  # weak hash CWE-327'
+    cwe_hint: ''
+    file: python/06_hash.py
+    label: 'yes'
+    lang: python
+- vars:
+    code: 'code = input(''code: '')
+
+      print(eval(code))  # CWE-94'
+    cwe_hint: CWE-94
+    file: python/07_eval.py
+    label: 'yes'
+    lang: python
+- vars:
+    code: 'code = input(''code: '')
+
+      print(''disabled'')  # pretend safe path'
+    cwe_hint: CWE-94
+    file: python/08_eval_guard.py
+    label: 'yes'
+    lang: python
+- vars:
+    code: "from flask import Flask, request\napp = Flask(__name__)\n@app.route('/')\n\
+      def i():\n  name = request.args.get('name','')\n  return f\"<h1>{name}</h1>\"\
+      \  # CWE-79"
+    cwe_hint: CWE-79
+    file: python/09_xss_flask.py
+    label: 'yes'
+    lang: python
+- vars:
+    code: "from flask import Flask, request\nfrom markupsafe import escape\napp =\
+      \ Flask(__name__)\n@app.route('/')\ndef i():\n  name = request.args.get('name','')\n\
+      \  return f\"<h1>{escape(name)}</h1>\""
+    cwe_hint: CWE-79
+    file: python/10_xss_escape.py
+    label: 'yes'
+    lang: python
+- vars:
+    code: app.get('/u', (req,res)=>{const u=req.query.u; db.query("SELECT * FROM users
+      WHERE name='"+u+"'");}); // CWE-89
+    cwe_hint: CWE-89
+    file: javascript/01_sql_concat.js
+    label: 'yes'
+    lang: javascript
+- vars:
+    code: app.get('/u', (req,res)=>{const u=req.query.u; db.query('SELECT * FROM users
+      WHERE name=?',[u]);});
+    cwe_hint: CWE-89
+    file: javascript/02_sql_param.js
+    label: 'no'
+    lang: javascript
+- vars:
+    code: const {exec} = require('child_process'); app.get('/ls',(req,res)=>exec('ls
+      '+req.query.p)); // CWE-78
+    cwe_hint: CWE-78
+    file: javascript/03_exec.js
+    label: 'yes'
+    lang: javascript
+- vars:
+    code: const {spawn} = require('child_process'); app.get('/ls',(req,res)=>spawn('ls',['--',
+      req.query.p]));
+    cwe_hint: CWE-78
+    file: javascript/04_exec_safe.js
+    label: 'no'
+    lang: javascript
+- vars:
+    code: const yaml = require('js-yaml'); app.post('/y',(req,res)=>{yaml.load(req.body)});
+      // YAML load risks
+    cwe_hint: CWE-502
+    file: javascript/05_deser_yaml.js
+    label: 'yes'
+    lang: javascript
+- vars:
+    code: const crypto=require('crypto'); app.post('/h',(req,res)=>{res.send(crypto.createHash('md5').update(req.body.p).digest('hex'));});
+      // CWE-327
+    cwe_hint: CWE-327
+    file: javascript/06_crypto_md5.js
+    label: 'yes'
+    lang: javascript
+- vars:
+    code: app.post('/e',(req,res)=>{res.send(eval(req.body.code))}); // CWE-94
+    cwe_hint: CWE-94
+    file: javascript/07_eval.js
+    label: 'yes'
+    lang: javascript
+- vars:
+    code: app.get('/',(req,res)=>res.send(`<h1>${req.query.name}</h1>`)); // CWE-79
+    cwe_hint: CWE-79
+    file: javascript/08_template_xss.js
+    label: 'yes'
+    lang: javascript
+- vars:
+    code: app.get('/f',(req,res)=>{const fs=require('fs'); const p = '../' + req.query.n;
+      res.send(fs.readFileSync(p,'utf8'));}); // CWE-22
+    cwe_hint: CWE-22
+    file: javascript/09_path_trav.js
+    label: 'yes'
+    lang: javascript
+- vars:
+    code: app.get('/f',(req,res)=>{const fs=require('fs'); const name=req.query.n;
+      if(!/^[\w\-.]+$/.test(name)) return res.status(400).end(); res.send(fs.readFileSync(`safe/${name}`,'utf8'));});
+    cwe_hint: ''
+    file: javascript/10_path_safe.js
+    label: 'no'
+    lang: javascript
+- vars:
+    code: String u = request.getParameter("u"); Statement st = conn.createStatement();
+      st.execute("SELECT * FROM users WHERE name='"+u+"'"); // CWE-89
+    cwe_hint: CWE-89
+    file: java/01_sql_concat.java
+    label: 'yes'
+    lang: java
+- vars:
+    code: String u = request.getParameter("u"); PreparedStatement ps = conn.prepareStatement("SELECT
+      * FROM users WHERE name=?"); ps.setString(1,u); ps.execute();
+    cwe_hint: CWE-89
+    file: java/02_sql_param.java
+    label: 'no'
+    lang: java
+- vars:
+    code: String p = request.getParameter("p"); Runtime.getRuntime().exec("ls "+p);
+      // CWE-78
+    cwe_hint: ''
+    file: java/03_cmdi.java
+    label: 'yes'
+    lang: java
+- vars:
+    code: ObjectInputStream in = new ObjectInputStream(req.getInputStream()); Object
+      o = in.readObject(); // CWE-502
+    cwe_hint: CWE-502
+    file: java/04_deser.java
+    label: 'yes'
+    lang: java
+- vars:
+    code: MessageDigest md = MessageDigest.getInstance("MD5"); md.digest(pwd.getBytes());
+      // CWE-327
+    cwe_hint: CWE-327
+    file: java/05_hash_md5.java
+    label: 'yes'
+    lang: java
+- vars:
+    code: DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance(); DocumentBuilder
+      db = dbf.newDocumentBuilder(); db.parse(req.getInputStream()); // CWE-611
+    cwe_hint: CWE-611
+    file: java/06_xxe.java
+    label: 'yes'
+    lang: java
+- vars:
+    code: DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance(); dbf.setFeature("http://apache.org/xml/features/disallow-doctype-decl",
+      true);
+    cwe_hint: CWE-611
+    file: java/07_xxe_safe.java
+    label: 'no'
+    lang: java
+- vars:
+    code: out.println("<h1>"+request.getParameter("name")+"</h1>"); // CWE-79
+    cwe_hint: CWE-79
+    file: java/08_xss_java.java
+    label: 'yes'
+    lang: java
+- vars:
+    code: String n = request.getParameter("n"); Files.readString(Paths.get("..", n));
+      // CWE-22
+    cwe_hint: CWE-22
+    file: java/09_path_trav.java
+    label: 'yes'
+    lang: java
+- vars:
+    code: System.out.println("Hello");
+    cwe_hint: ''
+    file: java/10_safe.java
+    label: 'no'
+    lang: java

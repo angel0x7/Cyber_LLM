@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "dependencies": {
+    "promptfoo": "0.123.1"
+  },
+  "engines": {
+    "node": "22.22.0"
+  }
+}

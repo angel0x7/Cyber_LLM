@@ -1,0 +1,1 @@
+CWE-79 Cross-Site Scripting arises when untrusted input is reflected into HTML without proper encoding.

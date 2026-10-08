@@ -1,0 +1,1 @@
+out.println("<h1>"+request.getParameter("name")+"</h1>"); // CWE-79

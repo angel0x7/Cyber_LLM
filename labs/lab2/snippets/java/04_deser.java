@@ -1,0 +1,1 @@
+ObjectInputStream in = new ObjectInputStream(req.getInputStream()); Object o = in.readObject(); // CWE-502

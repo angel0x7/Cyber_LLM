@@ -1,0 +1,1 @@
+const yaml = require('js-yaml'); app.post('/y',(req,res)=>{yaml.load(req.body)}); // YAML load risks

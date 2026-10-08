@@ -1,0 +1,1 @@
+String n = request.getParameter("n"); Files.readString(Paths.get("..", n)); // CWE-22

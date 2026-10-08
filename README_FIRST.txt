@@ -1,0 +1,9 @@
+LLM SECURITY · ECE 2026–2027
+OFFLINE VALIDATED · OPENROUTER COURSE-REPLAYED (DOCUMENTED LIMITS)
+
+Open index.html first. Follow Provider Setup → Lab 1 → Lab 2 → Lab 3 → Lab 4 → Lab 5 → choose Secure RAG OR Safe Agent → Submit / defend.
+Lab 6 — Cross-Model GenAI Security Benchmark. Six labs /10 each contribute 50%; project 50%.
+Run commands from this extracted folder. Install the pinned runtime using student_support/runtime.html. No repository checkout is needed.
+The public offline model fixtures are synthetic teaching checks, not measured provider security. The paid OpenRouter DeepSeek V4.1 Flash route reached CORE READY and FULL READY and was baseline-replayed: all 175 Labs 1–4/project rows ran live. That is coverage, not universal success. Documented limits: Lab 2 labels remain PROVISIONAL_GROUND_TRUTH; 49/49 findings addressed; 9 proposals exceed the under-12-line rule. Semantic correctness NOT reviewed; proposals NOT applied. Unresolved rows retained: lab3-complete: schema_or_coverage_error. 4 project cases are OFFLINE-ONLY / NOT DETERMINISTICALLY TRIGGERED LIVE. 3 live rows retain failed model assertions or exhausted output allowances; they are not passes. Model responses and latency vary. The historical Lab 4 evaluation-contract bug is fixed in both current arms. Interpret results case by case.
+Lab 5 TESTED LIVE BY INSTRUCTOR: 40 paired rows, 39 requests including smoke and retries, actual cost $0.00566700. Attack outcomes vary; inspect model and application defenses separately. Lab 6 TESTED LIVE BY INSTRUCTOR: 160 conditions across four exact models, 159 requests, reported charges $0.14820670, 4 unknown-cost attempts retained in $0.16721496 accounted. One classroom pass is not a universal model ranking. 
+Keep credentials in the private course-root .env and out of submissions.

@@ -1,0 +1,1 @@
+const {spawn} = require('child_process'); app.get('/ls',(req,res)=>spawn('ls',['--', req.query.p]));

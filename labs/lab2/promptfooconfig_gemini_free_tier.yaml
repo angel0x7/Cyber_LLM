@@ -1,0 +1,61 @@
+$schema: https://promptfoo.dev/config-schema.json
+description: 'Lab 2 live evaluation through the Google Promptfoo provider'
+
+providers:
+  - id: "google:{{ env.MODEL_ID }}"
+    label: google-live
+    config:
+      apiKey: "{{ env.GEMINI_API_KEY }}"
+      temperature: 0
+      showThinking: false
+      response_format:
+        type: json_object
+
+prompts:
+  # ONLY use JSON prompt - baseline_prompt.txt conflicts with response_format: json_object
+  - file://prompts/secure_review_chat.json
+
+defaultTest:
+  assert:
+    - type: is-json
+    - type: javascript
+      metric: accuracy
+      value: |
+        const expected = '{{ label }}';
+        const obj = typeof output === 'string' ? JSON.parse(output) : output;
+        let actual = obj.is_vuln;
+        
+        if (actual === undefined && typeof obj.is_vulnerable === 'boolean') {
+          actual = obj.is_vulnerable ? 'yes' : 'no';
+        } else if (actual === undefined && typeof obj.is_vulnerable === 'string') {
+          const v = obj.is_vulnerable.toLowerCase();
+          if (v.includes('yes') || v.includes('true')) actual = 'yes';
+          if (v.includes('no')  || v.includes('false')) actual = 'no';
+        }
+        
+        // Enhanced feedback with detailed error message
+        if (actual === expected) {
+          return {
+            pass: true,
+            score: 1,
+            reason: `✅ Correct classification: ${actual} (CWE: ${obj.cwe || 'N/A'})`
+          };
+        } else {
+          return {
+            pass: false,
+            score: 0,
+            reason: `❌ WRONG: Expected "${expected}" but got "${actual}"\n` +
+                    `   Model said: ${obj.title || 'N/A'}\n` +
+                    `   Rationale: ${obj.rationale?.substring(0, 150) || 'N/A'}...\n` +
+                    `   CWE: ${obj.cwe || 'none detected'}\n` +
+                    `   💡 FIX: Review prompt or provide better examples for this vulnerability type`
+          };
+        }
+
+tests: file://_generated/tests_flat.yaml
+
+evaluateOptions:
+  # Keep concurrency low. Adjust delay for the selected account's published limits.
+  maxConcurrency: 1
+  delay: 0
+  timeoutSeconds: 180

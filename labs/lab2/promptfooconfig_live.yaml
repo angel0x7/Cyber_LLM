@@ -1,0 +1,35 @@
+$schema: https://promptfoo.dev/config-schema.json
+description: >-
+  Live Lab 2 evaluation using the existing 30-case dataset. Its expected labels
+  are PROVISIONAL_GROUND_TRUTH and are not model-graded.
+
+providers:
+  - id: python:live_provider.py
+    label: course-llm-live
+    config:
+      pythonExecutable: "{{ env.COURSE_PYTHON }}"
+
+prompts:
+  - file://prompts/baseline_prompt.txt
+  - file://prompts/secure_review_prompt.txt
+
+defaultTest:
+  assert:
+    - type: is-json
+    - type: javascript
+      metric: provisional_accuracy
+      value: |
+        try {
+          const obj = typeof output === 'string' ? JSON.parse(output) : output;
+          const actual = String(obj.is_vuln || '').toLowerCase();
+          const expected = String(context.vars.label || '').toLowerCase();
+          return actual === expected ? 1 : 0;
+        } catch (_) {
+          return 0;
+        }
+
+tests: file://_generated/tests_flat.yaml
+
+evaluateOptions:
+  maxConcurrency: 1
+  timeoutSeconds: 180

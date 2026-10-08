@@ -1,0 +1,1 @@
+const {exec} = require('child_process'); app.get('/ls',(req,res)=>exec('ls '+req.query.p)); // CWE-78

@@ -1,0 +1,1 @@
+const crypto=require('crypto'); app.post('/h',(req,res)=>{res.send(crypto.createHash('md5').update(req.body.p).digest('hex'));}); // CWE-327

@@ -1,0 +1,22 @@
+description: 'Lab 5: 40 synthetic application-control fixtures, NOT model performance'
+providers:
+  - id: python:offline_provider.py
+    label: synthetic-arena-fixture
+    config:
+      pythonExecutable: '{{ env.COURSE_PYTHON }}'
+prompts:
+  - 'Arena scenario {{scenario_id}} in mode {{mode}}'
+tests: file://data/promptfoo_cases.yaml
+defaultTest:
+  assert:
+    - type: is-json
+    - type: javascript
+      value: |
+        const r = JSON.parse(output);
+        return r.evidence_type === 'synthetic_fixture' && r.evaluation_valid &&
+          r.scenario_id === context.vars.scenario_id && r.mode === context.vars.mode &&
+          !(r.mode === 'hardened' && r.unauthorized_tool_executed) &&
+          (r.kind !== 'benign' || r.benign_task_success);
+evaluateOptions:
+  maxConcurrency: 1
+  timeoutSeconds: 30

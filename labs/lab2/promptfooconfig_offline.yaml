@@ -1,0 +1,33 @@
+$schema: https://promptfoo.dev/config-schema.json
+description: 'Lab 2 pipeline smoke test using a local synthetic fixture provider'
+
+providers:
+  - id: python:custom_provider.py
+    label: synthetic-fixture-v1
+    config:
+      pythonExecutable: "{{ env.COURSE_PYTHON }}"
+
+prompts:
+  - file://prompts/baseline_prompt.txt
+  - file://prompts/secure_review_prompt.txt
+
+defaultTest:
+  assert:
+    - type: is-json
+    - type: javascript
+      metric: classification_accuracy
+      value: |
+        try {
+          const obj = typeof output === 'string' ? JSON.parse(output) : output;
+          const actual = String(obj.is_vuln || '').toLowerCase();
+          const expected = String(context.vars.label || '').toLowerCase();
+          return actual === expected ? 1 : 0;
+        } catch (_) {
+          return 0;
+        }
+
+tests: file://_generated/tests_flat.yaml
+
+evaluateOptions:
+  maxConcurrency: 1
+  timeoutSeconds: 30

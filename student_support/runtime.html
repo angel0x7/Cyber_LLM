@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><link href="data:," rel="icon"/><title>Help · LLM Security</title><link href="assets/course.css" rel="stylesheet"/><link href="assets/platform.css" rel="stylesheet"/><link href="assets/editorial.css" rel="stylesheet"/></head><body class="editorial"><a class="skip-link" href="#main-content">Skip to main content</a><div class="wrap"><header class="site-nav"><a class="brand" href="../index.html"><span aria-hidden="true" class="brand-mark">L / S</span>LLM SECURITY</a><nav aria-label="Main navigation" class="nav-links"><a href="../index.html">Course Home</a><a href="setup/index.html">Provider Setup</a><a href="labs/index.html">Labs</a><a href="project/index.html">Project</a><a href="help.html">Help</a><a href="lectures.html">Lectures</a><a href="assessment.html">Assessment</a></nav></header><main id="main-content" tabindex="-1"><p class="breadcrumb"><a href="../index.html">LLM Security</a> / Install once. Replay in order.</p><div class="hero"><p class="eyebrow">One runtime for the whole course</p><h1>Install once.<br/>Replay in order.</h1><p class="lead">Tested baseline: Linux x86_64, Python 3.12, Node 22.22.0, Promptfoo 0.123.1. On Windows use WSL2 with Ubuntu. Installation needs package registries; offline replay does not.</p></div><section class="card"><h2>1 / Python</h2><p>Open a terminal at the extracted course root, beside requirements.txt. Use the course-local Python 3.12 environment for every command.</p><pre tabindex="0">python3.12 -m venv .venv
+.venv/bin/python -m pip install -r runtime/requirements-preflight.lock
+.venv/bin/python tools/provider_preflight.py --provider openrouter --model deepseek/deepseek-v4.1-flash
+# Before starting the complete labs, extend the same environment:
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python -m pip check
+export REPLAY_ENV="$PWD/.venv"
+export COURSE_PYTHON="$REPLAY_ENV/bin/python"</pre><p>Save your provider configuration in the course-root  <code>.env</code> :  <code>LLM_PROVIDER=openrouter</code> ,  <code>MODEL_ID=deepseek/deepseek-v4.1-flash</code> , and your local  <code>OPENROUTER_API_KEY</code> . Python loads it automatically; exported values take precedence. Keep this file private. </p><p>OpenRouter DeepSeek is a paid route, course-replayed by the instructor with measured limitations; run your own CORE READY check before lab work. </p><p>The preflight profile has 3 direct dependencies and 12 locked packages. The full profile adds the scanners, notebooks, and retrieval runtime. Optional helper: <code>python3.12 tools/bootstrap_runtime.py --preflight</code>, then <code>--full</code> or <code>--doctor</code>.</p></section><section class="section card"><h2>2 / Node and Promptfoo</h2><p>Download the official <a href="https://nodejs.org/dist/v22.22.0/">Node 22.22.0 Linux x64 archive</a> and verify its SHA-256 against the official checksum file, then extract it into your runtime.</p><pre tabindex="0">curl --fail --location https://nodejs.org/dist/v22.22.0/node-v22.22.0-linux-x64.tar.xz -o "$REPLAY_ENV/node-v22.22.0-linux-x64.tar.xz"
+curl --fail --location https://nodejs.org/dist/v22.22.0/SHASUMS256.txt -o "$REPLAY_ENV/SHASUMS256.txt"
+(cd "$REPLAY_ENV" &amp;&amp; grep '  node-v22.22.0-linux-x64.tar.xz$' SHASUMS256.txt | sha256sum -c -)
+# Continue only if the checksum says OK.
+tar -xJf "$REPLAY_ENV/node-v22.22.0-linux-x64.tar.xz" -C "$REPLAY_ENV"
+mkdir -p "$REPLAY_ENV/node-tools"
+cp runtime/package*.json "$REPLAY_ENV/node-tools/"
+export PATH="$REPLAY_ENV/node-v22.22.0-linux-x64/bin:$REPLAY_ENV/bin:$PATH"
+npm ci --prefix "$REPLAY_ENV/node-tools"
+export COURSE_PYTHON="$REPLAY_ENV/bin/python"
+export PROMPTFOO_CLI="$REPLAY_ENV/node-tools/node_modules/promptfoo/dist/src/main.js"
+node --version
+"$COURSE_PYTHON" tools/bootstrap_runtime.py --doctor
+node "$PROMPTFOO_CLI" --version</pre><p>Expected versions: v22.22.0 and 0.123.1. This is the pinned teaching baseline; no global Promptfoo install is needed.</p></section><section class="section card"><h2>3 / Deterministic offline checks</h2><pre tabindex="0">"$COURSE_PYTHON" tools/student_replay.py --lab lab1 --runtime "$REPLAY_ENV"
+"$COURSE_PYTHON" tools/student_replay.py --lab lab2 --runtime "$REPLAY_ENV"
+"$COURSE_PYTHON" tools/student_replay.py --lab lab3 --runtime "$REPLAY_ENV"
+"$COURSE_PYTHON" tools/student_replay.py --lab lab4 --runtime "$REPLAY_ENV"
+"$COURSE_PYTHON" tools/student_replay.py --lab project --runtime "$REPLAY_ENV"</pre><p>Evidence is written below reports/offline/. Lab 2 and Project use actual Promptfoo with synthetic model responses. Lab 3 invokes real scanners. Never deploy its vulnerable examples.</p></section><p><a href="setup/index.html">Continue to Provider Setup →</a></p></main><footer>ECE · LLM Security · 2026–2027<br/>Build locally. Measure carefully. Defend your decisions.</footer></div><script defer="" src="assets/platform.js"></script><script defer="" src="assets/editorial.js"></script></body></html>
+

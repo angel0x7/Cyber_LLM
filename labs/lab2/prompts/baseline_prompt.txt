@@ -1,0 +1,8 @@
+You are a general software assistant. Read the code between <<< >>> and describe any issues you see.
+
+Code:
+<<<
+{{code}}
+>>>
+
+Respond in plain text with a short paragraph explaining any problems.

@@ -1,0 +1,25 @@
+Wrote per-test outcomes: /tmp/tmpot484zo6/metrics.csv
+Wrote grouped metrics: /tmp/tmpot484zo6/summary.csv
+Wrote per-test outcomes: /tmp/tmp82quvt8x/metrics.csv
+Wrote grouped metrics: /tmp/tmp82quvt8x/summary.csv
+Wrote per-test outcomes: /tmp/tmpcxbljj0a/metrics.csv
+Wrote grouped metrics: /tmp/tmpcxbljj0a/summary.csv
+Wrote per-test outcomes: /tmp/tmpj1cpw1dd/metrics.csv
+Wrote grouped metrics: /tmp/tmpj1cpw1dd/summary.csv
+test_offline_configs_return_a_promptfoo_javascript_score (test_batch_runner.BatchRunnerTests.test_offline_configs_return_a_promptfoo_javascript_score) ... ok
+test_offline_guard_rejects_live_provider_configs (test_batch_runner.BatchRunnerTests.test_offline_guard_rejects_live_provider_configs) ... ok
+test_temp_config_resolves_python_provider_against_source_config (test_batch_runner.BatchRunnerTests.test_temp_config_resolves_python_provider_against_source_config) ... ok
+test_missing_label_fails_closed (test_custom_provider.SyntheticProviderTests.test_missing_label_fails_closed) ... ok
+test_provider_returns_fixture_json_without_prompt_or_network_assumptions (test_custom_provider.SyntheticProviderTests.test_provider_returns_fixture_json_without_prompt_or_network_assumptions) ... ok
+test_safe_fixture_has_no_cwe (test_custom_provider.SyntheticProviderTests.test_safe_fixture_has_no_cwe) ... ok
+test_thirty_embedded_cases_cover_each_snippet_and_provider_contract (test_dataset_contract.DatasetContractTests.test_thirty_embedded_cases_cover_each_snippet_and_provider_contract) ... ok
+test_both_canonical_text_variants_are_preserved (test_live_prompt_contract.LivePromptContractTests.test_both_canonical_text_variants_are_preserved) ... ok
+test_chat_validation_and_empty_rejection (test_live_prompt_contract.LivePromptContractTests.test_chat_validation_and_empty_rejection) ... ok
+test_f1_requires_complete_unique_dataset_coverage_and_classifications (test_metrics.MetricsScriptTests.test_f1_requires_complete_unique_dataset_coverage_and_classifications) ... ok
+test_legacy_promptfoo_results_keep_per_prompt_counts (test_metrics.MetricsScriptTests.test_legacy_promptfoo_results_keep_per_prompt_counts) ... ok
+test_provider_model_prompt_test_and_failure_dimensions_are_preserved (test_metrics.MetricsScriptTests.test_provider_model_prompt_test_and_failure_dimensions_are_preserved) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.067s
+
+OK

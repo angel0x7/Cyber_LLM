@@ -1,0 +1,30 @@
+# Course Offline Replay
+
+Use when running `tools/student_replay.py --lab <lab> --runtime "$REPLAY_ENV"` for course labs.
+
+## Procedure
+
+1. Confirm `.venv/bin/python` exists: `ls /home/angel/Documents/Cyber_IA/.venv/bin/python`
+2. Check `PYTHONPATH` includes `course_llm`: `PYTHONPATH=/home/angel/Documents/Cyber_IA:$PYTHONPATH`
+3. Set runtime: `export REPLAY_ENV=/home/angel/Documents/Cyber_IA/.venv`
+4. Ensure dependencies are installed in venv:
+   - `google-genai` (required by `labs/lab1/src/app.py`)
+   - `pyyaml` (required by `labs/lab2/tests/test_batch_runner.py`)
+5. Ensure Node.js 22.22.0 is installed at `.venv/node-v22.22.0-linux-x64/bin/node`
+6. Ensure Promptfoo 0.123.1 is at `.venv/node-tools/node_modules/promptfoo/dist/src/main.js`
+7. Run: `.venv/bin/python tools/student_replay.py --lab lab1 --runtime "$REPLAY_ENV"`
+
+## Pitfalls
+
+- `ModuleNotFoundError: No module named 'google'` means `google-genai` is not installed in `.venv`
+- `ModuleNotFoundError: No module named 'yaml'` means `pyyaml` is missing
+- `ModuleNotFoundError: No module named 'course_llm'` means `PYTHONPATH` doesn't include the source root (`/home/angel/Documents/Cyber_IA/`)
+- `offline_replay.py` needs `sys.argv[2]` (work dir) in `sys.path` because `-I` ignores `PYTHONPATH`
+- `Local Node 22.22.0 is missing` requires downloading and extracting `node-v22.22.0-linux-x64.tar.xz` to `.venv/`
+- `Local Promptfoo 0.123.1 is missing` requires `npm ci` with `runtime/package-lock.json`
+
+## References
+
+- `docs/RUNTIME_REPLAY.md` for runtime requirements (Node 22.22.0, Promptfoo 0.123.1)
+- `tools/student_replay.py` for replay orchestration
+- `tools/offline_replay.py` for isolated test execution

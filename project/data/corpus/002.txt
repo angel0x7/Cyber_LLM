@@ -1,0 +1,1 @@
+OWASP LLM02: Insecure Output Handling. Treat model outputs as untrusted. Validate and sanitize before using results downstream.

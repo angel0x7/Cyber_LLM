@@ -1,0 +1,1 @@
+DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance(); DocumentBuilder db = dbf.newDocumentBuilder(); db.parse(req.getInputStream()); // CWE-611

@@ -1,0 +1,1 @@
+app.get('/u', (req,res)=>{const u=req.query.u; db.query('SELECT * FROM users WHERE name=?',[u]);});

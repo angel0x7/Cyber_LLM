@@ -1,0 +1,1 @@
+app.get('/',(req,res)=>res.send(`<h1>${req.query.name}</h1>`)); // CWE-79

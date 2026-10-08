@@ -1,0 +1,1 @@
+String u = request.getParameter("u"); PreparedStatement ps = conn.prepareStatement("SELECT * FROM users WHERE name=?"); ps.setString(1,u); ps.execute();

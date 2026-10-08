@@ -1,0 +1,29 @@
+{
+  "results": [
+    {
+      "promptIdx": 0,
+      "vars": {"label": "yes"},
+      "output": "{\"is_vuln\": \"yes\"}"
+    },
+    {
+      "promptIdx": 0,
+      "vars": {"label": "no"},
+      "output": "{\"is_vuln\": \"no\"}"
+    },
+    {
+      "promptIdx": 1,
+      "vars": {"label": "yes"},
+      "output": "{\"is_vuln\": \"no\"}"
+    },
+    {
+      "promptIdx": 1,
+      "vars": {"label": "no"},
+      "output": "{\"is_vuln\": \"yes\"}"
+    },
+    {
+      "promptIdx": 1,
+      "vars": {"label": "no"},
+      "output": "{\"is_vuln\": \"no\"}"
+    }
+  ]
+}

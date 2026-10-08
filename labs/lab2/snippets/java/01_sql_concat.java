@@ -1,0 +1,1 @@
+String u = request.getParameter("u"); Statement st = conn.createStatement(); st.execute("SELECT * FROM users WHERE name='"+u+"'"); // CWE-89

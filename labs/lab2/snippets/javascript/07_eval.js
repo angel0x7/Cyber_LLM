@@ -1,0 +1,1 @@
+app.post('/e',(req,res)=>{res.send(eval(req.body.code))}); // CWE-94

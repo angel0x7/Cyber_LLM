@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "decision",
+    "response",
+    "action"
+  ],
+  "properties": {
+    "decision": {
+      "enum": [
+        "answer",
+        "refuse",
+        "unsafe"
+      ]
+    },
+    "response": {
+      "type": "string",
+      "maxLength": 8000
+    },
+    "action": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "tool",
+            "arguments"
+          ],
+          "properties": {
+            "tool": {
+              "type": "string",
+              "maxLength": 80
+            },
+            "arguments": {
+              "type": "object"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

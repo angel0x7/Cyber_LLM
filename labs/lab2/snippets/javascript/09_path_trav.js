@@ -1,0 +1,1 @@
+app.get('/f',(req,res)=>{const fs=require('fs'); const p = '../' + req.query.n; res.send(fs.readFileSync(p,'utf8'));}); // CWE-22

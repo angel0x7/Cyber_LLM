@@ -1,0 +1,1 @@
+String p = request.getParameter("p"); Runtime.getRuntime().exec("ls "+p); // CWE-78

@@ -1,0 +1,14 @@
+Wrote /home/angel/.hermes/cache/scratch/llm-sec-offline-tests-c1alc4d3/labs/lab1/reports/baseline.json with 10 items.
+Report written to: /home/angel/.hermes/cache/scratch/llm-sec-offline-tests-c1alc4d3/labs/lab1/reports/baseline.json
+test_invalid_json_returns_error_dict (test_app.AnalyzeTextTests.test_invalid_json_returns_error_dict) ... ok
+test_server_error_retries_and_then_fails (test_app.AnalyzeTextTests.test_server_error_retries_and_then_fails) ... ok
+test_server_error_then_success (test_app.AnalyzeTextTests.test_server_error_then_success) ... ok
+test_successful_response_returns_analysis (test_app.AnalyzeTextTests.test_successful_response_returns_analysis) ... ok
+test_unrecognized_severity_defaults_to_medium (test_app.AnalyzeTextTests.test_unrecognized_severity_defaults_to_medium) ... ok
+test_offline_cli_never_reads_dotenv_or_constructs_client (test_runtime.OfflineBoundaryTests.test_offline_cli_never_reads_dotenv_or_constructs_client) ... ok
+test_stub_notebook_code_cells_run_without_client_or_dotenv (test_runtime.OfflineBoundaryTests.test_stub_notebook_code_cells_run_without_client_or_dotenv) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.007s
+
+OK

@@ -1,0 +1,284 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Arena result v1 \u2014 Lab 5 / Lab 6 common protocol",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "attack_success",
+    "locally_blocked",
+    "model_refusal",
+    "canary_leak",
+    "unauthorized_tool_requested",
+    "unauthorized_tool_executed",
+    "unsafe_output_accepted",
+    "unsafe_output_blocked",
+    "output_truncated",
+    "transport_error",
+    "benign_task_success",
+    "false_positive_block",
+    "model_canary_emitted",
+    "protected_behavior_changed",
+    "model_called",
+    "run_id",
+    "timestamp",
+    "scenario_id",
+    "owasp_id",
+    "family",
+    "kind",
+    "mode",
+    "provider",
+    "requested_model",
+    "returned_model",
+    "serving_backend",
+    "application_outcome",
+    "schema_valid",
+    "latency_ms",
+    "prompt_tokens",
+    "completion_tokens",
+    "reasoning_tokens",
+    "cost_usd",
+    "request_count",
+    "reserved_cost_usd",
+    "evidence_type",
+    "evaluation_valid",
+    "model_decision",
+    "control",
+    "visible_response",
+    "tool_receipt",
+    "status",
+    "error_category"
+  ],
+  "properties": {
+    "attack_success": {
+      "type": "boolean"
+    },
+    "locally_blocked": {
+      "type": "boolean"
+    },
+    "model_refusal": {
+      "type": "boolean"
+    },
+    "canary_leak": {
+      "type": "boolean"
+    },
+    "unauthorized_tool_requested": {
+      "type": "boolean"
+    },
+    "unauthorized_tool_executed": {
+      "type": "boolean"
+    },
+    "unsafe_output_accepted": {
+      "type": "boolean"
+    },
+    "unsafe_output_blocked": {
+      "type": "boolean"
+    },
+    "output_truncated": {
+      "type": "boolean"
+    },
+    "transport_error": {
+      "type": "boolean"
+    },
+    "benign_task_success": {
+      "type": "boolean"
+    },
+    "false_positive_block": {
+      "type": "boolean"
+    },
+    "model_canary_emitted": {
+      "type": "boolean"
+    },
+    "protected_behavior_changed": {
+      "type": "boolean"
+    },
+    "model_called": {
+      "type": "boolean"
+    },
+    "run_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "timestamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "scenario_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "owasp_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "family": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "kind": {
+      "enum": [
+        "adversarial",
+        "benign"
+      ]
+    },
+    "mode": {
+      "enum": [
+        "vulnerable",
+        "hardened"
+      ]
+    },
+    "provider": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "requested_model": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "returned_model": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "serving_backend": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "application_outcome": {
+      "enum": [
+        "accepted",
+        "canary_leak",
+        "evaluation_error",
+        "invalid_json",
+        "locally_blocked",
+        "model_refusal",
+        "model_safe_decision",
+        "model_unsafe_decision",
+        "output_truncated",
+        "provider_error",
+        "schema_error",
+        "transport_error",
+        "unauthorized_tool_blocked",
+        "unauthorized_tool_requested",
+        "unsafe_output_accepted",
+        "unsafe_output_blocked"
+      ]
+    },
+    "schema_valid": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "latency_ms": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "prompt_tokens": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "completion_tokens": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "reasoning_tokens": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "cost_usd": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "request_count": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "reserved_cost_usd": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "evidence_type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "evaluation_valid": {
+      "type": "boolean"
+    },
+    "model_decision": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "control": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "visible_response": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tool_receipt": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "status": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "error_category": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

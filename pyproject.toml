@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-security-course-runtime"
+version = "0.1.0"
+requires-python = ">=3.12"
+description = "Small shared provider boundary for the LLM Security course"
+
+[tool.setuptools]
+packages = ["course_llm"]

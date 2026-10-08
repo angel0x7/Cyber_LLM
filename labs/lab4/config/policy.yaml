@@ -1,0 +1,20 @@
+# These local rules run only in guarded mode. Input patterns are checked before
+# the provider call; output patterns are checked after the reply.
+deny_input_regex:
+  - "(?i)ignore (all|previous) instructions"
+  - "(?i)you are now the system"
+  - "(?i)pretend to be.*(developer|system)"
+  - "(?i)act as (system|developer)"
+  - "(?i)reveal|leak|exfiltrate|steal (the|my|your) (secret|password|api key|token)"
+  - "(?i)print the admin password"
+  - "(?i)run shell|execute .*command|rm -rf|powershell -"
+  - "(?i)browse this url and follow its instructions"
+
+deny_output_regex:
+  - "(?i)secret|password|api[_-]?key|token|private key|ssh-rsa"
+  - "(?i)<script>|javascript:"
+
+pii_patterns:
+  email: '(?i)\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b'
+  generic_key: '(?i)(sk|key|token)[-_][a-z0-9]{16,}'
+  aws_key: '(?i)AKIA[0-9A-Z]{16}'

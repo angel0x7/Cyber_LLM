@@ -1,0 +1,1 @@
+MessageDigest md = MessageDigest.getInstance("MD5"); md.digest(pwd.getBytes()); // CWE-327

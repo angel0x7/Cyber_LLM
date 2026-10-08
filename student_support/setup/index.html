@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head><link href="../assets/course.css" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="light" name="color-scheme"/>
+<link href="data:," rel="icon"/>
+<title>PROVIDER SETUP</title>
+<link href="../assets/setup.css" rel="stylesheet"/>
+<link href="../assets/platform.css" rel="stylesheet"/><link href="../assets/editorial.css" rel="stylesheet"/></head>
+<body class="editorial"><a class="skip-link" href="#main-content">Skip to main content</a>
+<div class="wrap"><header class="site-nav"><a class="brand" href="../../index.html"><span aria-hidden="true" class="brand-mark">L / S</span>LLM SECURITY</a><nav aria-label="Main navigation" class="nav-links"><a href="../../index.html">Course Home</a><a aria-current="page" href="index.html">Provider Setup</a><a href="../labs/index.html">Labs</a><a href="../project/index.html">Project</a><a href="../help.html">Help</a><a href="../lectures.html">Lectures</a><a href="../assessment.html">Assessment</a></nav></header>
+<main id="main-content" tabindex="-1"><p class="breadcrumb"><a href="../../index.html">LLM Security</a> / PROVIDER SETUP</p><div class="hero">
+<div>
+<p class="eyebrow">PROVIDER SETUP</p>
+<h1>PROVIDER SETUP</h1>
+</div>
+<div class="hero-meta">
+<strong>One route is enough to start.</strong>
+<span>Each pair needs at least one provider that passes the core check. Add a fallback if you can.</span>
+</div>
+</div><section aria-label="Provider setup architecture" style="background:#112b40;color:#edf4f3;border-radius:16px;padding:24px;margin-bottom:24px"><h2 style="margin-top:0">From your terminal to evidence</h2><div class="provider-flow" style="display:flex;flex-wrap:wrap;gap:12px"><div style="flex:1;min-width:140px;border:1px solid #658190;border-radius:9px;padding:14px"><strong>LOCAL TERMINAL</strong><p>Hidden key prompt<br/>Pair’s Python client</p></div><span aria-hidden="true" style="align-self:center">→</span><div style="flex:1;min-width:140px;border:1px solid #73bda8;border-radius:9px;padding:14px"><strong>PREFLIGHT GUARD</strong><p>Bounded checks<br/>No credential output</p></div><span aria-hidden="true" style="align-self:center">→</span><div style="flex:1;min-width:140px;border:1px solid #d7f36a;border-radius:9px;padding:14px"><strong>PROVIDER / MODEL</strong><p>Explicit endpoint<br/>Exact model ID</p></div><span aria-hidden="true" style="align-self:center">→</span><div style="flex:1;min-width:140px;border:1px dashed #658190;border-radius:9px;padding:14px"><strong>LOCAL RECEIPT</strong><p>CORE / FULL READY<br/>or exact failed gate</p></div></div><p style="margin-bottom:0">The browser never receives a key. FULL READY adds a 16 KiB context test and the actual Agent JSON calculator protocol; provider-native tools are optional.</p></section><div class="setup-card">
+<section aria-labelledby="prepare-heading" class="common-setup">
+<div>
+<h2 id="prepare-heading">Prepare once</h2>
+<p>From the extracted course root, create Python 3.12 locally and install the small preflight profile:</p>
+<p class="install"><code>python3.12 -m venv .venv</code><br/><code>.venv/bin/python -m pip install -r runtime/requirements-preflight.lock</code></p>
+<p>Save <code>LLM_PROVIDER=openrouter</code>, <code>MODEL_ID=deepseek/deepseek-v4.1-flash</code>, and your own <code>OPENROUTER_API_KEY</code> in the course-root <code>.env</code>. The Python tools load this file automatically. Exported values take precedence; no shell sourcing is needed.</p>
+<p>The small profile has 3 direct dependencies, 12 packages with pinned versions. Before the complete labs, extend the same environment with <code>.venv/bin/python -m pip install -r requirements.txt</code>. See the <a href="../runtime.html">complete runtime guide</a> for pinned Node and Promptfoo.</p>
+<p>Never put a key in a command, screenshot, shared file, or submission. The optional <code>--prompt-key</code> flag accepts a hidden key for a one-time check.</p>
+</div>
+<div class="credential-note">
+<p><strong>Core ready</strong> means API, exact model, strict JSON, and the harmless synthetic security case all pass. Labs 1–2 can start then.</p>
+<p><strong>Full ready</strong> also passes the optional long-context and tool checks. Safe Agent needs Full Ready or a compatible provider switch. This is a setup check, not full application certification.</p>
+<p><code>provider_setup_receipt.json</code> stays on this machine and contains no key, hidden reasoning, or private account ID; token counts and returned cost are safe metadata. For a later Full Ready check, use <code>--full --receipt provider_setup_receipt_full.json</code> to keep the core receipt unchanged.</p>
+</div>
+</section>
+<section aria-labelledby="provider-heading" class="provider-section">
+<div class="section-head">
+<h2 id="provider-heading">Choose a provider</h2>
+<p>Pair status: <strong>NOT RUN</strong> for every route.</p>
+</div>
+<details class="field-notes"><summary>Instructor example &amp; service limits</summary><div class="note-content"><p class="instructor-note"><strong>Day-1 primary student route: OpenRouter, paid.</strong>   <code>deepseek/deepseek-v4.1-flash</code>  reached  <strong>CORE READY</strong>  and  <strong>FULL READY</strong> . The instructor ran all 175 canonical rows.  <strong>COURSE-REPLAYED</strong>  means complete execution coverage, not that every security assertion passed. </p><p class="instructor-note">Lab 2 labels remain provisional; 49/49 findings addressed; 9 proposals exceed the under-12-line rule. Semantic correctness NOT reviewed; proposals NOT applied. Unresolved rows retained: lab3-complete: schema_or_coverage_error. 4 project cases are OFFLINE-ONLY / NOT DETERMINISTICALLY TRIGGERED LIVE. 3 live rows retain failed model assertions or exhausted output allowances; they are not passes. </p><p class="instructor-note">Model responses and latency vary. The historical Lab 4 evaluation-contract bug is fixed in both current arms. Each pair must run its own preflight and inspect its own evidence. </p><p class="instructor-note"><strong>Read the status precisely.</strong>  AVAILABLE describes service access subject to account limits. DOCUMENTED means setup guidance exists. COURSE-REPLAYED means the complete set of course cases was executed with the named provider/model; individual assertion results still matter. A CORE READY receipt proves the setup gates only. </p><p class="instructor-note">NVIDIA remains temporarily unavailable for Day 1; Alibaba and Cloudflare are documented but have no local instructor credential or readiness pass. </p></div></details>
+
+<div aria-label="Choose where your model will run" class="route-tabs" role="tablist">
+<button aria-controls="panel-nvidia" aria-selected="false" class="route-tab" id="tab-nvidia" role="tab" tabindex="-1" type="button">
+<span class="route-name">NVIDIA</span><span class="route-status">TEMPORARILY UNAVAILABLE</span>
+</button>
+<button aria-controls="panel-alibaba" aria-selected="false" class="route-tab" id="tab-alibaba" role="tab" tabindex="-1" type="button">
+<span class="route-name">Qwen / Alibaba</span><span class="route-status">DOCUMENTED</span>
+</button>
+<button aria-controls="panel-cloudflare" aria-selected="false" class="route-tab" id="tab-cloudflare" role="tab" tabindex="-1" type="button">
+<span class="route-name">Cloudflare</span><span class="route-status">DOCUMENTED</span>
+</button>
+<button aria-controls="panel-openrouter" aria-selected="true" class="route-tab" id="tab-openrouter" role="tab" tabindex="0" type="button">
+<span class="route-name">OpenRouter</span><span class="route-status">PRIMARY · COURSE-REPLAYED</span>
+</button>
+<button aria-controls="panel-opencode" aria-selected="false" class="route-tab" id="tab-opencode" role="tab" tabindex="-1" type="button">
+<span class="route-name">OpenCode Go</span><span class="route-status">BLOCKED · OPTIONAL PAID</span>
+</button>
+</div>
+<section aria-labelledby="tab-nvidia" class="provider-panel" hidden="" id="panel-nvidia" role="tabpanel" tabindex="0">
+<div class="panel-title"><div><h3>NVIDIA API Catalog / NIM</h3><p>NOT RECOMMENDED FOR DAY 1. This route is closed for the current teaching start.</p></div><span class="state-pill blocked">TEMPORARILY UNAVAILABLE</span></div>
+<dl class="specs">
+<div class="spec"><dt>Observed model</dt><dd><code>deepseek-ai/deepseek-v4.1-flash</code></dd></div>
+<div class="spec"><dt>Observed gates</dt><dd>Connectivity PASS; JSON PASS; harmless security classification BLOCKED by repeated read timeouts.</dd></div>
+<div class="spec"><dt>Observed requests</dt><dd>10 attempts: 2 successful responses and 8 timeouts. Zero course rows executed.</dd></div>
+<div class="spec"><dt>Day-1 action</dt><dd><strong>Do not retry this route for Day 1.</strong> Use a different provider after it passes its own checks. Historical evidence is retained by the instructor.</dd></div>
+</dl>
+</section>
+<section aria-labelledby="tab-alibaba" class="provider-panel" hidden="" id="panel-alibaba" role="tabpanel" tabindex="0">
+<div class="panel-title">
+<div><h3>Qwen / Alibaba Model Studio</h3><p>Use the Singapore region and its matching key. Free quota depends on account, region, and the selected model. Instructor execution: NOT RUN — no local DASHSCOPE_API_KEY; latency not measured.</p></div>
+<span class="state-pill">DOCUMENTED</span>
+</div>
+<dl class="specs">
+<div class="spec"><dt>Account</dt><dd><a href="https://www.alibabacloud.com/help/en/model-studio/get-api-key">Create a Model Studio account and API key in Singapore.</a> Check the Model Gallery for quota on <code>qwen-plus</code>.</dd></div>
+<div class="spec"><dt>API key</dt><dd>Use a general Model Studio API key for Singapore. Enable <strong>Free Quota Only</strong> before inference wherever that switch is available; if no free quota is shown, stop unless you knowingly accept pay-as-you-go charges. <a href="https://www.alibabacloud.com/help/en/model-studio/new-free-quota">Quota rules</a>. The current documentation gives eligible Singapore International models a 90-day new-user quota, typically 1,000,000 combined input/output tokens per model. Confirm the exact qwen-plus allowance in your console. Account-information completion is required; card/payment requirements were not observed on this instructor account.</dd></div>
+<div class="spec"><dt>Local env variable</dt><dd><code>DASHSCOPE_API_KEY</code>. Save it privately in the course-root .env with this variable name.</dd></div>
+<div class="spec"><dt>Run check</dt><dd><span class="model-id"><code>qwen-plus</code></span><div class="command-wrap"><code class="command">.venv/bin/python tools/provider_preflight.py --provider alibaba --model qwen-plus</code><button class="copy-button" data-copy=".venv/bin/python tools/provider_preflight.py --provider alibaba --model qwen-plus" type="button">Copy command</button></div><p class="run-note">Add <code>--full</code> for optional long-context and tool checks.</p></dd></div>
+<div class="spec"><dt>Expected pass</dt><dd>API PASS · MODEL PASS · JSON PASS · SECURITY CASE PASS → <strong>CORE READY</strong>. After pass: <code>export LLM_PROVIDER=alibaba MODEL_ID='qwen-plus'</code></dd></div>
+</dl>
+</section>
+<section aria-labelledby="tab-cloudflare" class="provider-panel" hidden="" id="panel-cloudflare" role="tabpanel" tabindex="0">
+<div class="panel-title">
+<div><h3>Cloudflare Workers AI</h3><p>This fp8-fast model is the Free-plan route shown here. The documented Workers Free allowance is 10,000 Neurons per day, resetting at 00:00 UTC; exceeding it stops free-plan operations. Instructor execution: NOT RUN — token and Account ID missing; latency and signup/card flow were not observed. </p><p>Some GLM, Kimi, and DeepSeek models require paid billing—do not assume they are free. </p></div>
+<span class="state-pill">DOCUMENTED</span>
+</div>
+<dl class="specs">
+<div class="spec"><dt>Account</dt><dd>Create a Cloudflare account with <a href="https://developers.cloudflare.com/workers-ai/get-started/rest-api/">Workers AI API access</a>. Check your current plan quota and billing settings.</dd></div>
+<div class="spec"><dt>API key</dt><dd>Create an API token with Workers AI read and edit permissions. Copy your Account ID from the dashboard; do not share it. <a href="https://developers.cloudflare.com/workers-ai/platform/pricing/">Plan and model pricing</a>.</dd></div>
+<div class="spec"><dt>Local env variable</dt><dd><code>CLOUDFLARE_API_TOKEN</code> and <code>CLOUDFLARE_ACCOUNT_ID</code>. For Bash, securely prompt for the token, then enter your account ID:<br/><code>read -rsp 'Workers AI token: ' CLOUDFLARE_API_TOKEN; echo</code><br/><code>read -rp 'Cloudflare Account ID: ' CLOUDFLARE_ACCOUNT_ID; echo; export CLOUDFLARE_API_TOKEN CLOUDFLARE_ACCOUNT_ID</code></dd></div>
+<div class="spec"><dt>Run check</dt><dd><span class="model-id"><code>@cf/meta/llama-3.1-8b-instruct-fp8-fast</code></span><div class="command-wrap"><code class="command">.venv/bin/python tools/provider_preflight.py --provider cloudflare --model @cf/meta/llama-3.1-8b-instruct-fp8-fast</code><button class="copy-button" data-copy=".venv/bin/python tools/provider_preflight.py --provider cloudflare --model @cf/meta/llama-3.1-8b-instruct-fp8-fast" type="button">Copy command</button></div><p class="run-note">Add <code>--full</code> for optional long-context and tool checks. <a href="https://developers.cloudflare.com/changelog/post/2026-05-08-planned-model-deprecations/">Model lifecycle note</a>.</p></dd></div>
+<div class="spec"><dt>Expected pass</dt><dd>API PASS · MODEL PASS · JSON PASS · SECURITY CASE PASS → <strong>CORE READY</strong>. After pass: <code>export LLM_PROVIDER=cloudflare MODEL_ID='@cf/meta/llama-3.1-8b-instruct-fp8-fast'</code></dd></div>
+</dl>
+</section>
+<section aria-labelledby="tab-openrouter" class="provider-panel" id="panel-openrouter" role="tabpanel" tabindex="0">
+<div class="panel-title">
+<div><h3>OpenRouter · DeepSeek V4.1 Flash</h3><p><strong>PRIMARY STUDENT ROUTE · PAID · COURSE-REPLAYED.</strong>  Instructor preflight reached CORE READY and FULL READY with this exact model. All 175 planned full-course rows were executed. Model behavior varies between runs and serving backends, and some cases are documented limits (see the status note above); inspect your own evidence case by case. </p><p>OpenRouter may change serving backends while keeping the requested model ID. </p></div>
+<span class="state-pill">COURSE-REPLAYED</span>
+</div>
+<dl class="specs">
+<div class="spec"><dt>Account</dt><dd><a href="https://openrouter.ai/">Create an OpenRouter account</a> and review <a href="https://openrouter.ai/pricing">current pricing and limits</a>. This selected model is paid; set a spending limit that fits your work.</dd></div>
+<div class="spec"><dt>API key</dt><dd>Create a key in your <a href="https://openrouter.ai/keys">OpenRouter key settings</a>. Keep it private and check the account balance before live exercises.</dd></div>
+<div class="spec"><dt>Local env variable</dt><dd><code>OPENROUTER_API_KEY</code>. Save it privately in the course-root .env with this variable name.</dd></div>
+<div class="spec"><dt>Run check</dt><dd><span class="model-id"><code>deepseek/deepseek-v4.1-flash</code></span><div class="command-wrap"><code class="command">.venv/bin/python tools/provider_preflight.py --provider openrouter --model deepseek/deepseek-v4.1-flash</code><button class="copy-button" data-copy=".venv/bin/python tools/provider_preflight.py --provider openrouter --model deepseek/deepseek-v4.1-flash" type="button">Copy command</button></div><p class="run-note">Add <code>--full</code> for optional long-context and Agent protocol checks. Keep this exact model ID in your evidence.</p></dd></div>
+<div class="spec"><dt>Expected pass</dt><dd>API PASS · MODEL PASS · JSON PASS · SECURITY CASE PASS → <strong>CORE READY</strong>. After pass, keep <code>LLM_PROVIDER=openrouter</code> and <code>MODEL_ID=deepseek/deepseek-v4.1-flash</code> in the private course-root <code>.env</code>.</dd></div>
+</dl>
+</section>
+<section aria-labelledby="tab-opencode" class="provider-panel" hidden="" id="panel-opencode" role="tabpanel" tabindex="0">
+<div class="panel-title">
+<div><h3>OpenCode Go · optional paid fallback</h3><p>Go is designed for OpenCode and coding-agent-like traffic. No authorized working key is configured locally, and generic course-preflight compatibility remains unvalidated. NOT RUN; not a tested paid fallback. Students are not required to purchase it.</p></div>
+<span class="state-pill blocked">BLOCKED · OPTIONAL PAID</span>
+</div>
+<dl class="specs">
+<div class="spec"><dt>Account</dt><dd><a href="https://opencode.ai/docs/go/">Review OpenCode Go’s current plan, model list, and usage rules.</a> This is an optional paid route.</dd></div>
+<div class="spec"><dt>API key</dt><dd>Create a Go key only if you choose the paid fallback. Do not use it for the generic course check until course staff validate that traffic fits Go’s usage rules.</dd></div>
+<div class="spec"><dt>Local env variable</dt><dd><code>OPENCODE_API_KEY</code>. Do not enter a key to record the blocked status.</dd></div>
+<div class="spec"><dt>Run check</dt><dd><span class="model-id"><code>glm-5.3-flash</code></span><div class="command-wrap"><code class="command">.venv/bin/python tools/provider_preflight.py --provider opencode-go --model glm-5.3-flash</code><button class="copy-button" data-copy=".venv/bin/python tools/provider_preflight.py --provider opencode-go --model glm-5.3-flash" type="button">Copy command</button></div><p class="run-note">This safely records NOT RUN and sends no HTTP request while compatibility is pending.</p></dd></div>
+<div class="spec"><dt>Expected pass</dt><dd><strong>NOT RUN · SETUP BLOCKED.</strong> It cannot count as CORE READY until compatibility is validated and the exact model passes the same checks.</dd></div>
+</dl>
+</section>
+<div aria-label="Readiness and fallback notes" class="note">
+<p><strong>After a pass:</strong> keep the provider and exact model together with <code>LLM_PROVIDER</code> and <code>MODEL_ID</code> for the shared adapter. Keep the redacted receipt with your pair’s local work.</p>
+<p class="try-another"><strong>If a route fails:</strong> <strong>TRY ANOTHER AVAILABLE ROUTE</strong> and run its own check. Record a provider switch explicitly and keep its results separate.</p>
+</div>
+<p aria-live="polite" class="visually-hidden" id="copy-status" role="status"></p>
+</section>
+</div></main><p style="margin-top:24px"><a href="../runtime.html">Install the complete pinned runtime →</a> · <a href="../labs/lab1.html">Continue to Lab 1 →</a></p>
+<footer>ECE · LLM Security · 2026–2027 · Badr TAJINI</footer></div>
+<script>
+    (() => {
+      const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
+      const panels = Array.from(document.querySelectorAll('[role="tabpanel"]'));
+      const copyStatus = document.getElementById('copy-status');
+
+      function selectTab(tab, moveFocus = false) {
+        tabs.forEach((candidate) => {
+          const selected = candidate === tab;
+          candidate.setAttribute('aria-selected', String(selected));
+          candidate.tabIndex = selected ? 0 : -1;
+        });
+        panels.forEach((panel) => {
+          panel.hidden = panel.id !== tab.getAttribute('aria-controls');
+        });
+        if (moveFocus) tab.focus();
+      }
+
+      tabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => selectTab(tab));
+        tab.addEventListener('keydown', (event) => {
+          let next = null;
+          if (event.key === 'ArrowRight' || event.key === 'ArrowDown') next = tabs[(index + 1) % tabs.length];
+          if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') next = tabs[(index - 1 + tabs.length) % tabs.length];
+          if (event.key === 'Home') next = tabs[0];
+          if (event.key === 'End') next = tabs[tabs.length - 1];
+          if (next) {
+            event.preventDefault();
+            selectTab(next, true);
+          }
+        });
+      });
+
+      document.querySelectorAll('[data-copy]').forEach((button) => {
+        button.addEventListener('click', async () => {
+          const command = button.getAttribute('data-copy');
+          try {
+            if (navigator.clipboard && window.isSecureContext) {
+              await navigator.clipboard.writeText(command);
+            } else {
+              const temporary = document.createElement('textarea');
+              temporary.value = command;
+              temporary.setAttribute('readonly', '');
+              temporary.style.position = 'fixed';
+              temporary.style.opacity = '0';
+              document.body.appendChild(temporary);
+              temporary.select();
+              let copied = false;
+              try {
+                copied = document.execCommand('copy');
+              } finally {
+                temporary.remove();
+              }
+              if (!copied) throw new Error('Clipboard copy was unavailable.');
+            }
+            copyStatus.textContent = 'Preflight command copied.';
+            button.textContent = 'Copied';
+            window.setTimeout(() => { button.textContent = 'Copy command'; }, 1400);
+          } catch {
+            copyStatus.textContent = 'Copy failed. Select and copy the command text.';
+          }
+        });
+      });
+    })();
+  </script>
+<script defer="" src="../assets/platform.js"></script><script defer="" src="../assets/editorial.js"></script></body>
+</html>
+
