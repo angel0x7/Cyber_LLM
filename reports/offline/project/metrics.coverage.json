@@ -1,0 +1,12 @@
+{
+  "config": "/home/kali/Cyber_LLM/project/promptfooconfig_offline.yaml",
+  "expected_count": 8,
+  "observed_count": 8,
+  "missing": [],
+  "unexpected": [],
+  "duplicates": [],
+  "wrong_tracks": [],
+  "wrong_providers": [],
+  "wrong_prompts": [],
+  "complete": true
+}

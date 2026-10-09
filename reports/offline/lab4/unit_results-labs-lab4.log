@@ -1,0 +1,40 @@
+Wrote /tmp/tmphzhsxzbr/nested/metrics.csv
+  [1/1] Processing attack...   [1/1] Processing attack... transport_error
+Wrote /tmp/tmpjgkpchd5/unguarded.json
+  [1/1] Processing attack... rate limited; waiting once and retrying...
+  [1/1] Retry outcome: transport_error
+Wrote /tmp/tmpow8vvlj_/unguarded.json
+  [1/1] Processing attack... model_safe_decision
+Wrote /tmp/tmpgrvy0e93/unguarded.json
+test_empty_run_has_zero_rates (test_metrics.MetricsTests.test_empty_run_has_zero_rates) ... ok
+test_failed_cases_remain_in_total_denominator (test_metrics.MetricsTests.test_failed_cases_remain_in_total_denominator) ... ok
+test_legacy_rows_are_classified_without_unsafe_pass_claim (test_metrics.MetricsTests.test_legacy_rows_are_classified_without_unsafe_pass_claim) ... ok
+test_main_writes_all_outcomes_and_keeps_failures_in_denominator (test_metrics.MetricsTests.test_main_writes_all_outcomes_and_keeps_failures_in_denominator) ... ok
+test_both_modes_request_the_same_output_contract (test_suite.OutputContractRegressionTests.test_both_modes_request_the_same_output_contract) ... ok
+test_canonical_attack_corpus_is_unchanged (test_suite.OutputContractRegressionTests.test_canonical_attack_corpus_is_unchanged) ... ok
+test_contract_matches_the_evaluator_schema (test_suite.OutputContractRegressionTests.test_contract_matches_the_evaluator_schema) ... ok
+test_guarded_arm_is_byte_identical_to_the_measured_arm (test_suite.OutputContractRegressionTests.test_guarded_arm_is_byte_identical_to_the_measured_arm) ... ok
+test_guarded_contract_remains_in_the_system_instruction (test_suite.OutputContractRegressionTests.test_guarded_contract_remains_in_the_system_instruction) ... ok
+test_unguarded_contract_is_in_the_user_message_and_not_a_safety_instruction (test_suite.OutputContractRegressionTests.test_unguarded_contract_is_in_the_user_message_and_not_a_safety_instruction) ... ok
+test_unguarded_mode_still_has_no_local_guards (test_suite.OutputContractRegressionTests.test_unguarded_mode_still_has_no_local_guards) ... ok
+test_application_bug_is_not_converted_to_transport_error (test_suite.RunSuiteTests.test_application_bug_is_not_converted_to_transport_error) ... ok
+test_create_live_client_requires_explicit_model_id (test_suite.RunSuiteTests.test_create_live_client_requires_explicit_model_id) ... ok
+test_empty_model_text_without_refusal_metadata_is_invalid_json (test_suite.RunSuiteTests.test_empty_model_text_without_refusal_metadata_is_invalid_json) ... ok
+test_empty_string_from_injected_model_is_not_assumed_to_be_a_refusal (test_suite.RunSuiteTests.test_empty_string_from_injected_model_is_not_assumed_to_be_a_refusal) ... ok
+test_guarded_input_block_is_local_and_does_not_fabricate_model_decision (test_suite.RunSuiteTests.test_guarded_input_block_is_local_and_does_not_fabricate_model_decision) ... ok
+test_guarded_model_request_receives_system_instruction (test_suite.RunSuiteTests.test_guarded_model_request_receives_system_instruction) ... ok
+test_guarded_output_block_is_local_and_does_not_claim_model_decision (test_suite.RunSuiteTests.test_guarded_output_block_is_local_and_does_not_claim_model_decision) ... ok
+test_json_syntax_and_schema_failures_have_distinct_outcomes (test_suite.RunSuiteTests.test_json_syntax_and_schema_failures_have_distinct_outcomes) ... ok
+test_live_model_id_is_required_and_invalid_ids_are_rejected (test_suite.RunSuiteTests.test_live_model_id_is_required_and_invalid_ids_are_rejected) ... ok
+test_offline_mode_blocks_client_creation_before_dotenv_loading (test_suite.RunSuiteTests.test_offline_mode_blocks_client_creation_before_dotenv_loading) ... ok
+test_plain_text_provider_refusal_is_not_reported_as_invalid_json (test_suite.RunSuiteTests.test_plain_text_provider_refusal_is_not_reported_as_invalid_json) ... ok
+test_provider_config_omits_or_includes_system_instruction_by_mode (test_suite.RunSuiteTests.test_provider_config_omits_or_includes_system_instruction_by_mode) ... ok
+test_provider_safety_refusal_with_empty_body_is_separate_outcome (test_suite.RunSuiteTests.test_provider_safety_refusal_with_empty_body_is_separate_outcome) ... ok
+test_provider_transport_failure_is_retained_as_a_result (test_suite.RunSuiteTests.test_provider_transport_failure_is_retained_as_a_result) ... ok
+test_rate_limit_retry_failure_keeps_one_transport_error_row (test_suite.RunSuiteTests.test_rate_limit_retry_failure_keeps_one_transport_error_row) ... ok
+test_run_unguarded_generates_model_decision_without_system_instruction (test_suite.RunSuiteTests.test_run_unguarded_generates_model_decision_without_system_instruction) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.040s
+
+OK

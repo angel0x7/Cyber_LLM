@@ -1,0 +1,44 @@
+{
+  "status": "PASS WITH FIX",
+  "network": "blocked by Python audit guard",
+  "gemini_remediation": "NOT RUN",
+  "scanners": [
+    {
+      "scanner": "checkov",
+      "executable": "/home/kali/Cyber_LLM/.venv/bin/checkov",
+      "command": [
+        "/home/kali/Cyber_LLM/.venv/bin/python",
+        "-B",
+        "scripts/run_checkov.py"
+      ],
+      "exit_code": 0,
+      "seconds": 21.866,
+      "findings": 47,
+      "targets": [
+        "/Dockerfile",
+        "/deployment.yaml",
+        "/main.tf"
+      ],
+      "report": "/home/kali/Cyber_LLM/reports/offline/lab3/checkov.json",
+      "status": "PASS WITH FIX"
+    },
+    {
+      "scanner": "semgrep",
+      "executable": "/home/kali/Cyber_LLM/.venv/bin/semgrep",
+      "command": [
+        "/home/kali/Cyber_LLM/.venv/bin/python",
+        "-B",
+        "scripts/run_semgrep.py"
+      ],
+      "exit_code": 0,
+      "seconds": 11.844,
+      "findings": 2,
+      "targets": [
+        "docker/Dockerfile",
+        "k8s/deployment.yaml"
+      ],
+      "report": "/home/kali/Cyber_LLM/reports/offline/lab3/semgrep.json",
+      "status": "PASS WITH FIX"
+    }
+  ]
+}

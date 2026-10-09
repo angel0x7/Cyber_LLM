@@ -1,11 +1,11 @@
-Wrote per-test outcomes: /tmp/tmpot484zo6/metrics.csv
-Wrote grouped metrics: /tmp/tmpot484zo6/summary.csv
-Wrote per-test outcomes: /tmp/tmp82quvt8x/metrics.csv
-Wrote grouped metrics: /tmp/tmp82quvt8x/summary.csv
-Wrote per-test outcomes: /tmp/tmpcxbljj0a/metrics.csv
-Wrote grouped metrics: /tmp/tmpcxbljj0a/summary.csv
-Wrote per-test outcomes: /tmp/tmpj1cpw1dd/metrics.csv
-Wrote grouped metrics: /tmp/tmpj1cpw1dd/summary.csv
+Wrote per-test outcomes: /tmp/tmpqsfxiueh/metrics.csv
+Wrote grouped metrics: /tmp/tmpqsfxiueh/summary.csv
+Wrote per-test outcomes: /tmp/tmpwru6qh91/metrics.csv
+Wrote grouped metrics: /tmp/tmpwru6qh91/summary.csv
+Wrote per-test outcomes: /tmp/tmp7vvfdyy5/metrics.csv
+Wrote grouped metrics: /tmp/tmp7vvfdyy5/summary.csv
+Wrote per-test outcomes: /tmp/tmpx6lb3fs5/metrics.csv
+Wrote grouped metrics: /tmp/tmpx6lb3fs5/summary.csv
 test_offline_configs_return_a_promptfoo_javascript_score (test_batch_runner.BatchRunnerTests.test_offline_configs_return_a_promptfoo_javascript_score) ... ok
 test_offline_guard_rejects_live_provider_configs (test_batch_runner.BatchRunnerTests.test_offline_guard_rejects_live_provider_configs) ... ok
 test_temp_config_resolves_python_provider_against_source_config (test_batch_runner.BatchRunnerTests.test_temp_config_resolves_python_provider_against_source_config) ... ok
@@ -20,6 +20,6 @@ test_legacy_promptfoo_results_keep_per_prompt_counts (test_metrics.MetricsScript
 test_provider_model_prompt_test_and_failure_dimensions_are_preserved (test_metrics.MetricsScriptTests.test_provider_model_prompt_test_and_failure_dimensions_are_preserved) ... ok
 
 ----------------------------------------------------------------------
-Ran 12 tests in 0.067s
+Ran 12 tests in 0.287s
 
 OK

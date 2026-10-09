@@ -1,0 +1,13 @@
+{
+  "provider": "openrouter",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "offline": false,
+  "fingerprint": "078b12aad4b6657b40ee748d23c326d4281ad23045167c3bbb2909c39e72ec95",
+  "run_id": "03a09e1c-756e-4e4b-aedf-bde1108737c8",
+  "budget_limit_usd": 1.0,
+  "accounted_usd": 0.0046178999999999994,
+  "attempts": 1,
+  "attempt_records": [],
+  "rows": {},
+  "pending": "LLM05-A1:vulnerable"
+}

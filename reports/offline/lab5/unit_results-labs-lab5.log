@@ -1,0 +1,72 @@
+test_allowed_calculator (test_arena.ArenaTests.test_allowed_calculator) ... ok
+test_allowed_search (test_arena.ArenaTests.test_allowed_search) ... ok
+test_benign_controls (test_arena.ArenaTests.test_benign_controls) ... ok
+test_budget_invalid_cli (test_arena.ArenaTests.test_budget_invalid_cli) ... usage: -c [-h] [--offline] [--smoke] [--provider {openrouter}] [--model MODEL]
+          [--budget BUDGET] [--output OUTPUT] [--resume]
+          [--owasp {LLM01,LLM02,LLM05,LLM06}] [--mode {vulnerable,hardened}]
+          [--scenario SCENARIO]
+-c: error: Budget must be finite, positive and at most $1.00
+usage: -c [-h] [--offline] [--smoke] [--provider {openrouter}] [--model MODEL]
+          [--budget BUDGET] [--output OUTPUT] [--resume]
+          [--owasp {LLM01,LLM02,LLM05,LLM06}] [--mode {vulnerable,hardened}]
+          [--scenario SCENARIO]
+-c: error: Budget must be finite, positive and at most $1.00
+usage: -c [-h] [--offline] [--smoke] [--provider {openrouter}] [--model MODEL]
+          [--budget BUDGET] [--output OUTPUT] [--resume]
+          [--owasp {LLM01,LLM02,LLM05,LLM06}] [--mode {vulnerable,hardened}]
+          [--scenario SCENARIO]
+-c: error: Budget must be finite, positive and at most $1.00
+usage: -c [-h] [--offline] [--smoke] [--provider {openrouter}] [--model MODEL]
+          [--budget BUDGET] [--output OUTPUT] [--resume]
+          [--owasp {LLM01,LLM02,LLM05,LLM06}] [--mode {vulnerable,hardened}]
+          [--scenario SCENARIO]
+-c: error: Budget must be finite, positive and at most $1.00
+ok
+test_canary_action_arguments (test_arena.ArenaTests.test_canary_action_arguments) ... ok
+test_canary_literal_all_locations (test_arena.ArenaTests.test_canary_literal_all_locations) ... ok
+test_canonical_inputs_unchanged (test_arena.ArenaTests.test_canonical_inputs_unchanged) ... ok
+test_changed_source_resume_rejected (test_arena.ArenaTests.test_changed_source_resume_rejected) ... usage: -c [-h] [--offline] [--smoke] [--provider {openrouter}] [--model MODEL]
+          [--budget BUDGET] [--output OUTPUT] [--resume]
+          [--owasp {LLM01,LLM02,LLM05,LLM06}] [--mode {vulnerable,hardened}]
+          [--scenario SCENARIO]
+-c: error: Resume identity, source, dataset, or budget differs; preserve evidence and use a new run
+ok
+test_cost_aggregation_unknown (test_arena.ArenaTests.test_cost_aggregation_unknown) ... ok
+test_denied_tools_no_real_execution (test_arena.ArenaTests.test_denied_tools_no_real_execution) ... ok
+test_durable_budget (test_arena.ArenaTests.test_durable_budget) ... ok
+test_exact_model (test_arena.ArenaTests.test_exact_model) ... usage: -c [-h] [--offline] [--smoke] [--provider {openrouter}] [--model MODEL]
+          [--budget BUDGET] [--output OUTPUT] [--resume]
+          [--owasp {LLM01,LLM02,LLM05,LLM06}] [--mode {vulnerable,hardened}]
+          [--scenario SCENARIO]
+-c: error: Lab 5 uses the single certified exact model; Lab 6 is upcoming
+ok
+test_family_counts (test_arena.ArenaTests.test_family_counts) ... ok
+test_fixture_count_and_common_schema (test_arena.ArenaTests.test_fixture_count_and_common_schema) ... ok
+test_identical_schema (test_arena.ArenaTests.test_identical_schema) ... ok
+test_interrupted_resume_fails_closed (test_arena.ArenaTests.test_interrupted_resume_fails_closed) ... usage: -c [-h] [--offline] [--smoke] [--provider {openrouter}] [--model MODEL]
+          [--budget BUDGET] [--output OUTPUT] [--resume]
+          [--owasp {LLM01,LLM02,LLM05,LLM06}] [--mode {vulnerable,hardened}]
+          [--scenario SCENARIO]
+-c: error: Interrupted in-flight row: reservation preserved; no automatic repayment. Inspect state.json with instructor.
+ok
+test_live_boundary_usage_and_secrets (test_arena.ArenaTests.test_live_boundary_usage_and_secrets) ... ok
+test_live_model_mismatch_is_provider_error (test_arena.ArenaTests.test_live_model_mismatch_is_provider_error) ... ok
+test_live_truncation_is_not_defense (test_arena.ArenaTests.test_live_truncation_is_not_defense) ... ok
+test_live_unknown_cost_preserved (test_arena.ArenaTests.test_live_unknown_cost_preserved) ... ok
+test_metrics_denominators (test_arena.ArenaTests.test_metrics_denominators) ... ok
+test_no_raw_output_or_hidden_reasoning_metadata (test_arena.ArenaTests.test_no_raw_output_or_hidden_reasoning_metadata) ... ok
+test_offline_resume_does_not_repeat (test_arena.ArenaTests.test_offline_resume_does_not_repeat) ... ok
+test_required_dataset_fields_and_no_private_notes (test_arena.ArenaTests.test_required_dataset_fields_and_no_private_notes) ... ok
+test_result_schema (test_arena.ArenaTests.test_result_schema) ... ok
+test_schema_invalid_is_not_defense (test_arena.ArenaTests.test_schema_invalid_is_not_defense) ... ok
+test_sixteen_plus_four (test_arena.ArenaTests.test_sixteen_plus_four) ... ok
+test_step_cap (test_arena.ArenaTests.test_step_cap) ... ok
+test_successful_override_is_not_labeled_safe (test_arena.ArenaTests.test_successful_override_is_not_labeled_safe) ... ok
+test_unauthorized_request_vs_virtual_dispatch (test_arena.ArenaTests.test_unauthorized_request_vs_virtual_dispatch) ... ok
+test_unique_twenty (test_arena.ArenaTests.test_unique_twenty) ... ok
+test_unsafe_output_handling (test_arena.ArenaTests.test_unsafe_output_handling) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 11.193s
+
+OK

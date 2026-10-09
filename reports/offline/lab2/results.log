@@ -1,0 +1,414 @@
+Cache is disabled.
+Starting evaluation eval-6UP-2026-10-09T17:59:37
+Running 60 test cases (up to 1 at a time)...
+
+┌─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────┐
+│ code            │ cwe_hint        │ file            │ label           │ lang            │ [synthetic-fix… │ [synthetic-fix… │
+│                 │                 │                 │                 │                 │ prompts/baseli… │ prompts/secure… │
+│                 │                 │                 │                 │                 │ You are a       │ You are a       │
+│                 │                 │                 │                 │                 │ general         │ security code   │
+│                 │                 │                 │                 │                 │ software        │ auditor. Return │
+│                 │                 │                 │                 │                 │ assistant. Read │ **JSON ONLY**   │
+│                 │                 │                 │                 │                 │ the code        │ that matches    │
+│                 │                 │                 │                 │                 │ between <<< >>> │ this schema:    │
+│                 │                 │                 │                 │                 │ and describe    │ {               │
+│                 │                 │                 │                 │                 │ any issues you  │   "is_vuln":    │
+│                 │                 │                 │                 │                 │ see.            │ "yes|no",       │
+│                 │                 │                 │                 │                 │ Code:           │   "cwe": "CWE-… │
+│                 │                 │                 │                 │                 │ <<<             │ or null",       │
+│                 │                 │                 │                 │                 │ {{code}}        │   "title": "sh… │
+│                 │                 │                 │                 │                 │ >>>             │ finding title", │
+│                 │                 │                 │                 │                 │ Respond in      │   "rationale":  │
+│                 │                 │                 │                 │                 │ plain text with │ "why thi...     │
+│                 │                 │                 │                 │                 │ a short         │                 │
+│                 │                 │                 │                 │                 │ paragraph       │                 │
+│                 │                 │                 │                 │                 │ explaining any  │                 │
+│                 │                 │                 │                 │                 │ problems.       │                 │
+├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+│ import sqlite3  │ CWE-89          │ python/01_inse… │ yes             │ python          │ [PASS] {"cwe":  │ [PASS] {"cwe":  │
+│ user =          │                 │                 │                 │                 │ "CWE-89",       │ "CWE-89",       │
+│ input('u: ')    │                 │                 │                 │                 │ "is_vuln":      │ "is_vuln":      │
+│ q = "SELECT *   │                 │                 │                 │                 │ "yes",          │ "yes",          │
+│ FROM users      │                 │                 │                 │                 │ "rationale":    │ "rationale":    │
+│ WHERE name = '" │                 │                 │                 │                 │ "Deterministic  │ "Deterministic  │
+│ + user + "'"    │                 │                 │                 │                 │ offline fixture │ offline fixture │
+│ conn=sqlite3.c… │                 │                 │                 │                 │ derived from    │ derived from    │
+│ print(conn.exe… │                 │                 │                 │                 │ the dataset     │ the dataset     │
+│ # CWE-89        │                 │                 │                 │                 │ label.",        │ label.",        │
+│                 │                 │                 │                 │                 │ "title":        │ "title":        │
+│                 │                 │                 │                 │                 │ "Synthetic      │ "Synthetic      │
+│                 │                 │                 │                 │                 │ fixture         │ fixture         │
+│                 │                 │                 │                 │                 │ finding"}       │ finding"}       │
+├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+│ import sqlite3  │                 │ python/02_safe… │ no              │ python          │ [PASS] {"cwe":  │ [PASS] {"cwe":  │
+│ user =          │                 │                 │                 │                 │ null,           │ null,           │
+│ input('u: ')    │                 │                 │                 │                 │ "is_vuln":      │ "is_vuln":      │
+│ conn=sqlite3.c… │                 │                 │                 │                 │ "no",           │ "no",           │
+│ print(conn.exe… │                 │                 │                 │                 │ "rationale":    │ "rationale":    │
+│ * FROM users    │                 │                 │                 │                 │ "Deterministic  │ "Deterministic  │
+│ WHERE name =    │                 │                 │                 │                 │ offline fixture │ offline fixture │
+│ ?',             │                 │                 │                 │                 │ derived from    │ derived from    │
+│ (user,)).fetch… │                 │                 │                 │                 │ the dataset     │ the dataset     │
+│                 │                 │                 │                 │                 │ label.",        │ label.",        │
+│                 │                 │                 │                 │                 │ "title":        │ "title":        │
+│                 │                 │                 │                 │                 │ "Synthetic      │ "Synthetic      │
+│                 │                 │                 │                 │                 │ fixture safe"}  │ fixture safe"}  │
+├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+│ import os       │                 │ python/03_os_c… │ yes             │ python          │ [PASS] {"cwe":  │ [PASS] {"cwe":  │
+│ path =          │                 │                 │                 │                 │ null,           │ null,           │
+│ input('p: ')    │                 │                 │                 │                 │ "is_vuln":      │ "is_vuln":      │
+│ os.system('ls ' │                 │                 │                 │                 │ "yes",          │ "yes",          │
+│ + path)  #      │                 │                 │                 │                 │ "rationale":    │ "rationale":    │
+│ CWE-78          │                 │                 │                 │                 │ "Deterministic  │ "Deterministic  │
+│                 │                 │                 │                 │                 │ offline fixture │ offline fixture │
+│                 │                 │                 │                 │                 │ derived from    │ derived from    │
+│                 │                 │                 │                 │                 │ the dataset     │ the dataset     │
+│                 │                 │                 │                 │                 │ label.",        │ label.",        │
+│                 │                 │                 │                 │                 │ "title":        │ "title":        │
+│                 │                 │                 │                 │                 │ "Synthetic      │ "Synthetic      │
+│                 │                 │                 │                 │                 │ fixture         │ fixture         │
+│                 │                 │                 │                 │                 │ finding"}       │ finding"}       │
+├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+│ import          │                 │ python/04_os_c… │ no              │ python          │ [PASS] {"cwe":  │ [PASS] {"cwe":  │
+│ subprocess,     │                 │                 │                 │                 │ null,           │ null,           │
+│ shlex           │                 │                 │                 │                 │ "is_vuln":      │ "is_vuln":      │
+│ path =          │                 │                 │                 │                 │ "no",           │ "no",           │
+│ input('p: ')    │                 │                 │                 │                 │ "rationale":    │ "rationale":    │
+│ subprocess.run… │                 │                 │                 │                 │ "Deterministic  │ "Deterministic  │
+│ '--', path])    │                 │                 │                 │                 │ offline fixture │ offline fixture │
+│                 │                 │                 │                 │                 │ derived from    │ derived from    │
+│                 │                 │                 │                 │                 │ the dataset     │ the dataset     │
+│                 │                 │                 │                 │                 │ label.",        │ label.",        │
+│                 │                 │                 │                 │                 │ "title":        │ "title":        │
+│                 │                 │                 │                 │                 │ "Synthetic      │ "Synthetic      │
+│                 │                 │                 │                 │                 │ fixture safe"}  │ fixture safe"}  │
+├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+│ import pickle   │ CWE-502         │ python/05_dese… │ yes             │ python          │ [PASS] {"cwe":  │ [PASS] {"cwe":  │
+│ raw =           │                 │                 │                 │                 │ "CWE-502",      │ "CWE-502",      │
+│ input('data: ') │                 │                 │                 │                 │ "is_vuln":      │ "is_vuln":      │
+│ obj =           │                 │                 │                 │                 │ "yes",          │ "yes",          │
+│ pickle.loads(b… │                 │                 │                 │                 │ "rationale":    │ "rationale":    │
+│ # CWE-502       │                 │                 │                 │                 │ "Deterministic  │ "Deterministic  │
+│                 │                 │                 │                 │                 │ offline fixture │ offline fixture │
+│                 │                 │                 │                 │                 │ derived from    │ derived from    │
+│                 │                 │                 │                 │                 │ the dataset     │ the dataset     │
+│                 │                 │                 │                 │                 │ label.",        │ label.",        │
+│                 │                 │                 │                 │                 │ "title":        │ "title":        │
+│                 │                 │                 │                 │                 │ "Synthetic      │ "Synthetic      │
+│                 │                 │                 │                 │                 │ fixture         │ fixture         │
+│                 │                 │                 │                 │                 │ finding"}       │ finding"}       │
+├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+│ import hashlib  │                 │ python/06_hash… │ yes             │ python          │ [PASS] {"cwe":  │ [PASS] {"cwe":  │
+│ pwd =           │                 │                 │                 │                 │ null,           │ null,           │
+│ input('pwd: ')  │                 │                 │                 │                 │ "is_vuln":      │ "is_vuln":      │
+│ print(hashlib.… │                 │                 │                 │                 │ "yes",          │ "yes",          │
+│ # weak hash     │                 │                 │                 │                 │ "rationale":    │ "rationale":    │
+│ CWE-327         │                 │                 │                 │                 │ "Deterministic  │ "Deterministic  │
+│                 │                 │                 │                 │                 │ offline fixture │ offline fixture │
+│                 │                 │                 │                 │                 │ derived from    │ derived from    │
+│                 │                 │                 │                 │                 │ the dataset     │ the dataset     │
+│                 │                 │                 │                 │                 │ label.",        │ label.",        │
+│                 │                 │                 │                 │                 │ "title":        │ "title":        │
+│                 │                 │                 │                 │                 │ "Synthetic      │ "Synthetic      │
+│                 │                 │                 │                 │                 │ fixture         │ fixture         │
+│                 │                 │                 │                 │                 │ finding"}       │ finding"}       │
+├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+│ code =          │ CWE-94          │ python/07_eval… │ yes             │ python          │ [PASS] {"cwe":  │ [PASS] {"cwe":  │
+│ input('code: ') │                 │                 │                 │                 │ "CWE-94",       │ "CWE-94",       │
+│ print(eval(cod… │                 │                 │                 │                 │ "is_vuln":      │ "is_vuln":      │
+│ # CWE-94        │                 │                 │                 │                 │ "yes",          │ "yes",          │
+│                 │                 │                 │                 │                 │ "rationale":    │ "rationale":    │
+│                 │                 │                 │                 │                 │ "Deterministic  │ "Deterministic  │
+│                 │                 │                 │                 │                 │ offline fixture │ offline fixture │
+│                 │                 │                 │                 │                 │ derived from    │ derived from    │
+│                 │                 │                 │                 │                 │ the dataset     │ the dataset     │
+│                 │                 │                 │                 │                 │ label.",        │ label.",        │
+│                 │                 │                 │                 │                 │ "title":        │ "title":        │
+│                 │                 │                 │                 │                 │ "Synthetic      │ "Synthetic      │
+│                 │                 │                 │                 │                 │ fixture         │ fixture         │
+│                 │                 │                 │                 │                 │ finding"}       │ finding"}       │
+├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+│ code =          │ CWE-94          │ python/08_eval… │ yes             │ python          │ [PASS] {"cwe":  │ [PASS] {"cwe":  │
+│ input('code: ') │                 │                 │                 │                 │ "CWE-94",       │ "CWE-94",       │
+│ print('disable… │                 │                 │                 │                 │ "is_vuln":      │ "is_vuln":      │
+│ # pretend safe  │                 │                 │                 │                 │ "yes",          │ "yes",          │
+│ path            │                 │                 │                 │                 │ "rationale":    │ "rationale":    │
+│                 │                 │                 │                 │                 │ "Deterministic  │ "Deterministic  │
+│                 │                 │                 │                 │                 │ offline fixture │ offline fixture │
+│                 │                 │                 │                 │                 │ derived from    │ derived from    │
+│                 │                 │                 │                 │                 │ the dataset     │ the dataset     │
+│                 │                 │                 │                 │                 │ label.",        │ label.",        │
+│                 │                 │                 │                 │                 │ "title":        │ "title":        │
+│                 │                 │                 │                 │                 │ "Synthetic      │ "Synthetic      │
+│                 │                 │                 │                 │                 │ fixture         │ fixture         │
+│                 │                 │                 │                 │                 │ finding"}       │ finding"}       │
+├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+│ from flask      │ CWE-79          │ python/09_xss_… │ yes             │ python          │ [PASS] {"cwe":  │ [PASS] {"cwe":  │
+│ import Flask,   │                 │                 │                 │                 │ "CWE-79",       │ "CWE-79",       │
+│ request         │                 │                 │                 │                 │ "is_vuln":      │ "is_vuln":      │
+│ app =           │                 │                 │                 │                 │ "yes",          │ "yes",          │
+│ Flask(__name__) │                 │                 │                 │                 │ "rationale":    │ "rationale":    │
+│ @app.route('/') │                 │                 │                 │                 │ "Deterministic  │ "Deterministic  │
+│ def i():        │                 │                 │                 │                 │ offline fixture │ offline fixture │
+│   name =        │                 │                 │                 │                 │ derived from    │ derived from    │
+│ request.args.g… │                 │                 │                 │                 │ the dataset     │ the dataset     │
+│   return        │                 │                 │                 │                 │ label.",        │ label.",        │
+│ f"<h1>{name}</… │                 │                 │                 │                 │ "title":        │ "title":        │
+│ # CWE-79        │                 │                 │                 │                 │ "Synthetic      │ "Synthetic      │
+│                 │                 │                 │                 │                 │ fixture         │ fixture         │
+│                 │                 │                 │                 │                 │ finding"}       │ finding"}       │
+├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+│ from flask      │ CWE-79          │ python/10_xss_… │ yes             │ python          │ [PASS] {"cwe":  │ [PASS] {"cwe":  │
+│ import Flask,   │                 │                 │                 │                 │ "CWE-79",       │ "CWE-79",       │
+│ request         │                 │                 │                 │                 │ "is_vuln":      │ "is_vuln":      │
+│ from markupsafe │                 │                 │                 │                 │ "yes",          │ "yes",          │
+│ import escape   │                 │                 │                 │                 │ "rationale":    │ "rationale":    │
+│ app =           │                 │                 │                 │                 │ "Deterministic  │ "Deterministic  │
+│ Flask(__name__) │                 │                 │                 │                 │ offline fixture │ offline fixture │
+│ @app.route('/') │                 │                 │                 │                 │ derived from    │ derived from    │
+│ def i():        │                 │                 │                 │                 │ the dataset     │ the dataset     │
+│   name =        │                 │                 │                 │                 │ label.",        │ label.",        │
+│ request.args.g… │                 │                 │                 │                 │ "title":        │ "title":        │
+│   return        │                 │                 │                 │                 │ "Synthetic      │ "Synthetic      │
+│ f"<h1>{escape(… │                 │                 │                 │                 │ fixture         │ fixture         │
+│                 │                 │                 │                 │                 │ finding"}       │ finding"}       │
+├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+│ app.get('/u',   │ CWE-89          │ javascript/01_… │ yes             │ javascript      │ [PASS] {"cwe":  │ [PASS] {"cwe":  │
+│ (req,res)=>{co… │                 │                 │                 │                 │ "CWE-89",       │ "CWE-89",       │
+│ u=req.query.u;  │                 │                 │                 │                 │ "is_vuln":      │ "is_vuln":      │
+│ db.query("SELE… │                 │                 │                 │                 │ "yes",          │ "yes",          │
+│ * FROM users    │                 │                 │                 │                 │ "rationale":    │ "rationale":    │
+│ WHERE           │                 │                 │                 │                 │ "Deterministic  │ "Deterministic  │
+│ name='"+u+"'")… │                 │                 │                 │                 │ offline fixture │ offline fixture │
+│ // CWE-89       │                 │                 │                 │                 │ derived from    │ derived from    │
+│                 │                 │                 │                 │                 │ the dataset     │ the dataset     │
+│                 │                 │                 │                 │                 │ label.",        │ label.",        │
+│                 │                 │                 │                 │                 │ "title":        │ "title":        │
+│                 │                 │                 │                 │                 │ "Synthetic      │ "Synthetic      │
+│                 │                 │                 │                 │                 │ fixture         │ fixture         │
+│                 │                 │                 │                 │                 │ finding"}       │ finding"}       │
+├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+│ app.get('/u',   │ CWE-89          │ javascript/02_… │ no              │ javascript      │ [PASS] {"cwe":  │ [PASS] {"cwe":  │
+│ (req,res)=>{co… │                 │                 │                 │                 │ null,           │ null,           │
+│ u=req.query.u;  │                 │                 │                 │                 │ "is_vuln":      │ "is_vuln":      │
+│ db.query('SELE… │                 │                 │                 │                 │ "no",           │ "no",           │
+│ * FROM users    │                 │                 │                 │                 │ "rationale":    │ "rationale":    │
+│ WHERE           │                 │                 │                 │                 │ "Deterministic  │ "Deterministic  │
+│ name=?',[u]);}… │                 │                 │                 │                 │ offline fixture │ offline fixture │
+│                 │                 │                 │                 │                 │ derived from    │ derived from    │
+│                 │                 │                 │                 │                 │ the dataset     │ the dataset     │
+│                 │                 │                 │                 │                 │ label.",        │ label.",        │
+│                 │                 │                 │                 │                 │ "title":        │ "title":        │
+│                 │                 │                 │                 │                 │ "Synthetic      │ "Synthetic      │
+│                 │                 │                 │                 │                 │ fixture safe"}  │ fixture safe"}  │
+├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+│ const {exec} =  │ CWE-78          │ javascript/03_… │ yes             │ javascript      │ [PASS] {"cwe":  │ [PASS] {"cwe":  │
+│ require('child… │                 │                 │                 │                 │ "CWE-78",       │ "CWE-78",       │
+│ app.get('/ls',… │                 │                 │                 │                 │ "is_vuln":      │ "is_vuln":      │
+│ '+req.query.p)… │                 │                 │                 │                 │ "yes",          │ "yes",          │
+│ // CWE-78       │                 │                 │                 │                 │ "rationale":    │ "rationale":    │
+│                 │                 │                 │                 │                 │ "Deterministic  │ "Deterministic  │
+│                 │                 │                 │                 │                 │ offline fixture │ offline fixture │
+│                 │                 │                 │                 │                 │ derived from    │ derived from    │
+│                 │                 │                 │                 │                 │ the dataset     │ the dataset     │
+│                 │                 │                 │                 │                 │ label.",        │ label.",        │
+│                 │                 │                 │                 │                 │ "title":        │ "title":        │
+│                 │                 │                 │                 │                 │ "Synthetic      │ "Synthetic      │
+│                 │                 │                 │                 │                 │ fixture         │ fixture         │
+│                 │                 │                 │                 │                 │ finding"}       │ finding"}       │
+├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+│ const {spawn} = │ CWE-78          │ javascript/04_… │ no              │ javascript      │ [PASS] {"cwe":  │ [PASS] {"cwe":  │
+│ require('child… │                 │                 │                 │                 │ null,           │ null,           │
+│ app.get('/ls',… │                 │                 │                 │                 │ "is_vuln":      │ "is_vuln":      │
+│ req.query.p])); │                 │                 │                 │                 │ "no",           │ "no",           │
+│                 │                 │                 │                 │                 │ "rationale":    │ "rationale":    │
+│                 │                 │                 │                 │                 │ "Deterministic  │ "Deterministic  │
+│                 │                 │                 │                 │                 │ offline fixture │ offline fixture │
+│                 │                 │                 │                 │                 │ derived from    │ derived from    │
+│                 │                 │                 │                 │                 │ the dataset     │ the dataset     │
+│                 │                 │                 │                 │                 │ label.",        │ label.",        │
+│                 │                 │                 │                 │                 │ "title":        │ "title":        │
+│                 │                 │                 │                 │                 │ "Synthetic      │ "Synthetic      │
+│                 │                 │                 │                 │                 │ fixture safe"}  │ fixture safe"}  │
+├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+│ const yaml =    │ CWE-502         │ javascript/05_… │ yes             │ javascript      │ [PASS] {"cwe":  │ [PASS] {"cwe":  │
+│ require('js-ya… │                 │                 │                 │                 │ "CWE-502",      │ "CWE-502",      │
+│ app.post('/y',… │                 │                 │                 │                 │ "is_vuln":      │ "is_vuln":      │
+│ // YAML load    │                 │                 │                 │                 │ "yes",          │ "yes",          │
+│ risks           │                 │                 │                 │                 │ "rationale":    │ "rationale":    │
+│                 │                 │                 │                 │                 │ "Deterministic  │ "Deterministic  │
+│                 │                 │                 │                 │                 │ offline fixture │ offline fixture │
+│                 │                 │                 │                 │                 │ derived from    │ derived from    │
+│                 │                 │                 │                 │                 │ the dataset     │ the dataset     │
+│                 │                 │                 │                 │                 │ label.",        │ label.",        │
+│                 │                 │                 │                 │                 │ "title":        │ "title":        │
+│                 │                 │                 │                 │                 │ "Synthetic      │ "Synthetic      │
+│                 │                 │                 │                 │                 │ fixture         │ fixture         │
+│                 │                 │                 │                 │                 │ finding"}       │ finding"}       │
+├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+│ const           │ CWE-327         │ javascript/06_… │ yes             │ javascript      │ [PASS] {"cwe":  │ [PASS] {"cwe":  │
+│ crypto=require… │                 │                 │                 │                 │ "CWE-327",      │ "CWE-327",      │
+│ app.post('/h',… │                 │                 │                 │                 │ "is_vuln":      │ "is_vuln":      │
+│ // CWE-327      │                 │                 │                 │                 │ "yes",          │ "yes",          │
+│                 │                 │                 │                 │                 │ "rationale":    │ "rationale":    │
+│                 │                 │                 │                 │                 │ "Deterministic  │ "Deterministic  │
+│                 │                 │                 │                 │                 │ offline fixture │ offline fixture │
+│                 │                 │                 │                 │                 │ derived from    │ derived from    │
+│                 │                 │                 │                 │                 │ the dataset     │ the dataset     │
+│                 │                 │                 │                 │                 │ label.",        │ label.",        │
+│                 │                 │                 │                 │                 │ "title":        │ "title":        │
+│                 │                 │                 │                 │                 │ "Synthetic      │ "Synthetic      │
+│                 │                 │                 │                 │                 │ fixture         │ fixture         │
+│                 │                 │                 │                 │                 │ finding"}       │ finding"}       │
+├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+│ app.post('/e',… │ CWE-94          │ javascript/07_… │ yes             │ javascript      │ [PASS] {"cwe":  │ [PASS] {"cwe":  │
+│ // CWE-94       │                 │                 │                 │                 │ "CWE-94",       │ "CWE-94",       │
+│                 │                 │                 │                 │                 │ "is_vuln":      │ "is_vuln":      │
+│                 │                 │                 │                 │                 │ "yes",          │ "yes",          │
+│                 │                 │                 │                 │                 │ "rationale":    │ "rationale":    │
+│                 │                 │                 │                 │                 │ "Deterministic  │ "Deterministic  │
+│                 │                 │                 │                 │                 │ offline fixture │ offline fixture │
+│                 │                 │                 │                 │                 │ derived from    │ derived from    │
+│                 │                 │                 │                 │                 │ the dataset     │ the dataset     │
+│                 │                 │                 │                 │                 │ label.",        │ label.",        │
+│                 │                 │                 │                 │                 │ "title":        │ "title":        │
+│                 │                 │                 │                 │                 │ "Synthetic      │ "Synthetic      │
+│                 │                 │                 │                 │                 │ fixture         │ fixture         │
+│                 │                 │                 │                 │                 │ finding"}       │ finding"}       │
+├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+│ app.get('/',(r… │ CWE-79          │ javascript/08_… │ yes             │ javascript      │ [PASS] {"cwe":  │ [PASS] {"cwe":  │
+│ // CWE-79       │                 │                 │                 │                 │ "CWE-79",       │ "CWE-79",       │
+│                 │                 │                 │                 │                 │ "is_vuln":      │ "is_vuln":      │
+│                 │                 │                 │                 │                 │ "yes",          │ "yes",          │
+│                 │                 │                 │                 │                 │ "rationale":    │ "rationale":    │
+│                 │                 │                 │                 │                 │ "Deterministic  │ "Deterministic  │
+│                 │                 │                 │                 │                 │ offline fixture │ offline fixture │
+│                 │                 │                 │                 │                 │ derived from    │ derived from    │
+│                 │                 │                 │                 │                 │ the dataset     │ the dataset     │
+│                 │                 │                 │                 │                 │ label.",        │ label.",        │
+│                 │                 │                 │                 │                 │ "title":        │ "title":        │
+│                 │                 │                 │                 │                 │ "Synthetic      │ "Synthetic      │
+│                 │                 │                 │                 │                 │ fixture         │ fixture         │
+│                 │                 │                 │                 │                 │ finding"}       │ finding"}       │
+├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+│ app.get('/f',(… │ CWE-22          │ javascript/09_… │ yes             │ javascript      │ [PASS] {"cwe":  │ [PASS] {"cwe":  │
+│ fs=require('fs… │                 │                 │                 │                 │ "CWE-22",       │ "CWE-22",       │
+│ const p = '../' │                 │                 │                 │                 │ "is_vuln":      │ "is_vuln":      │
+│ + req.query.n;  │                 │                 │                 │                 │ "yes",          │ "yes",          │
+│ res.send(fs.re… │                 │                 │                 │                 │ "rationale":    │ "rationale":    │
+│ // CWE-22       │                 │                 │                 │                 │ "Deterministic  │ "Deterministic  │
+│                 │                 │                 │                 │                 │ offline fixture │ offline fixture │
+│                 │                 │                 │                 │                 │ derived from    │ derived from    │
+│                 │                 │                 │                 │                 │ the dataset     │ the dataset     │
+│                 │                 │                 │                 │                 │ label.",        │ label.",        │
+│                 │                 │                 │                 │                 │ "title":        │ "title":        │
+│                 │                 │                 │                 │                 │ "Synthetic      │ "Synthetic      │
+│                 │                 │                 │                 │                 │ fixture         │ fixture         │
+│                 │                 │                 │                 │                 │ finding"}       │ finding"}       │
+├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+│ app.get('/f',(… │                 │ javascript/10_… │ no              │ javascript      │ [PASS] {"cwe":  │ [PASS] {"cwe":  │
+│ fs=require('fs… │                 │                 │                 │                 │ null,           │ null,           │
+│ const           │                 │                 │                 │                 │ "is_vuln":      │ "is_vuln":      │
+│ name=req.query… │                 │                 │                 │                 │ "no",           │ "no",           │
+│ if(!/^[\w\-.]+… │                 │                 │                 │                 │ "rationale":    │ "rationale":    │
+│ return          │                 │                 │                 │                 │ "Deterministic  │ "Deterministic  │
+│ res.status(400… │                 │                 │                 │                 │ offline fixture │ offline fixture │
+│ res.send(fs.re… │                 │                 │                 │                 │ derived from    │ derived from    │
+│                 │                 │                 │                 │                 │ the dataset     │ the dataset     │
+│                 │                 │                 │                 │                 │ label.",        │ label.",        │
+│                 │                 │                 │                 │                 │ "title":        │ "title":        │
+│                 │                 │                 │                 │                 │ "Synthetic      │ "Synthetic      │
+│                 │                 │                 │                 │                 │ fixture safe"}  │ fixture safe"}  │
+├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+│ String u =      │ CWE-89          │ java/01_sql_co… │ yes             │ java            │ [PASS] {"cwe":  │ [PASS] {"cwe":  │
+│ request.getPar… │                 │                 │                 │                 │ "CWE-89",       │ "CWE-89",       │
+│ Statement st =  │                 │                 │                 │                 │ "is_vuln":      │ "is_vuln":      │
+│ conn.createSta… │                 │                 │                 │                 │ "yes",          │ "yes",          │
+│ st.execute("SE… │                 │                 │                 │                 │ "rationale":    │ "rationale":    │
+│ * FROM users    │                 │                 │                 │                 │ "Deterministic  │ "Deterministic  │
+│ WHERE           │                 │                 │                 │                 │ offline fixture │ offline fixture │
+│ name='"+u+"'"); │                 │                 │                 │                 │ derived from    │ derived from    │
+│ // CWE-89       │                 │                 │                 │                 │ the dataset     │ the dataset     │
+│                 │                 │                 │                 │                 │ label.",        │ label.",        │
+│                 │                 │                 │                 │                 │ "title":        │ "title":        │
+│                 │                 │                 │                 │                 │ "Synthetic      │ "Synthetic      │
+│                 │                 │                 │                 │                 │ fixture         │ fixture         │
+│                 │                 │                 │                 │                 │ finding"}       │ finding"}       │
+├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+│ String u =      │ CWE-89          │ java/02_sql_pa… │ no              │ java            │ [PASS] {"cwe":  │ [PASS] {"cwe":  │
+│ request.getPar… │                 │                 │                 │                 │ null,           │ null,           │
+│ PreparedStatem… │                 │                 │                 │                 │ "is_vuln":      │ "is_vuln":      │
+│ ps =            │                 │                 │                 │                 │ "no",           │ "no",           │
+│ conn.prepareSt… │                 │                 │                 │                 │ "rationale":    │ "rationale":    │
+│ * FROM users    │                 │                 │                 │                 │ "Deterministic  │ "Deterministic  │
+│ WHERE name=?"); │                 │                 │                 │                 │ offline fixture │ offline fixture │
+│ ps.setString(1… │                 │                 │                 │                 │ derived from    │ derived from    │
+│ ps.execute();   │                 │                 │                 │                 │ the dataset     │ the dataset     │
+│                 │                 │                 │                 │                 │ label.",        │ label.",        │
+│                 │                 │                 │                 │                 │ "title":        │ "title":        │
+│                 │                 │                 │                 │                 │ "Synthetic      │ "Synthetic      │
+│                 │                 │                 │                 │                 │ fixture safe"}  │ fixture safe"}  │
+├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+│ String p =      │                 │ java/03_cmdi.j… │ yes             │ java            │ [PASS] {"cwe":  │ [PASS] {"cwe":  │
+│ request.getPar… │                 │                 │                 │                 │ null,           │ null,           │
+│ Runtime.getRun… │                 │                 │                 │                 │ "is_vuln":      │ "is_vuln":      │
+│ "+p); // CWE-78 │                 │                 │                 │                 │ "yes",          │ "yes",          │
+│                 │                 │                 │                 │                 │ "rationale":    │ "rationale":    │
+│                 │                 │                 │                 │                 │ "Deterministic  │ "Deterministic  │
+│                 │                 │                 │                 │                 │ offline fixture │ offline fixture │
+│                 │                 │                 │                 │                 │ derived from    │ derived from    │
+│                 │                 │                 │                 │                 │ the dataset     │ the dataset     │
+│                 │                 │                 │                 │                 │ label.",        │ label.",        │
+│                 │                 │                 │                 │                 │ "title":        │ "title":        │
+│                 │                 │                 │                 │                 │ "Synthetic      │ "Synthetic      │
+│                 │                 │                 │                 │                 │ fixture         │ fixture         │
+│                 │                 │                 │                 │                 │ finding"}       │ finding"}       │
+├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+│ ObjectInputStr… │ CWE-502         │ java/04_deser.… │ yes             │ java            │ [PASS] {"cwe":  │ [PASS] {"cwe":  │
+│ in = new        │                 │                 │                 │                 │ "CWE-502",      │ "CWE-502",      │
+│ ObjectInputStr… │                 │                 │                 │                 │ "is_vuln":      │ "is_vuln":      │
+│ Object o =      │                 │                 │                 │                 │ "yes",          │ "yes",          │
+│ in.readObject(… │                 │                 │                 │                 │ "rationale":    │ "rationale":    │
+│ // CWE-502      │                 │                 │                 │                 │ "Deterministic  │ "Deterministic  │
+│                 │                 │                 │                 │                 │ offline fixture │ offline fixture │
+│                 │                 │                 │                 │                 │ derived from    │ derived from    │
+│                 │                 │                 │                 │                 │ the dataset     │ the dataset     │
+│                 │                 │                 │                 │                 │ label.",        │ label.",        │
+│                 │                 │                 │                 │                 │ "title":        │ "title":        │
+│                 │                 │                 │                 │                 │ "Synthetic      │ "Synthetic      │
+│                 │                 │                 │                 │                 │ fixture         │ fixture         │
+│                 │                 │                 │                 │                 │ finding"}       │ finding"}       │
+├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
+│ MessageDigest   │ CWE-327         │ java/05_hash_m… │ yes             │ java            │ [PASS] {"cwe":  │ [PASS] {"cwe":  │
+│ md =            │                 │                 │                 │                 │ "CWE-327",      │ "CWE-327",      │
+│ MessageDigest.… │                 │                 │                 │                 │ "is_vuln":      │ "is_vuln":      │
+│ md.digest(pwd.… │                 │                 │                 │                 │ "yes",          │ "yes",          │
+│ // CWE-327      │                 │                 │                 │                 │ "rationale":    │ "rationale":    │
+│                 │                 │                 │                 │                 │ "Deterministic  │ "Deterministic  │
+│                 │                 │                 │                 │                 │ offline fixture │ offline fixture │
+│                 │                 │                 │                 │                 │ derived from    │ derived from    │
+│                 │                 │                 │                 │                 │ the dataset     │ the dataset     │
+│                 │                 │                 │                 │                 │ label.",        │ label.",        │
+│                 │                 │                 │                 │                 │ "title":        │ "title":        │
+│                 │                 │                 │                 │                 │ "Synthetic      │ "Synthetic      │
+│                 │                 │                 │                 │                 │ fixture         │ fixture         │
+│                 │                 │                 │                 │                 │ finding"}       │ finding"}       │
+└─────────────────┴─────────────────┴─────────────────┴─────────────────┴─────────────────┴─────────────────┴─────────────────┘
+... 5 more rows not shown ...
+
+✓ Eval complete (ID: eval-6UP-2026-10-09T17:59:37)
+
+» View results: promptfoo view
+» Share with your team: https://promptfoo.app
+» Feedback: https://promptfoo.dev/feedback
+
+
+Results:
+  ✓ 60 passed (100%)
+  0 failed (0%)
+  0 errors (0%)
+Duration: 8s (concurrency: 1)
+
+Writing output to /home/kali/Cyber_LLM/reports/offline/lab2/results.json
+(node:32739) ExperimentalWarning: DecompressInterceptor is experimental and subject to change
+(Use `node --trace-warnings ...` to show where the warning was created)

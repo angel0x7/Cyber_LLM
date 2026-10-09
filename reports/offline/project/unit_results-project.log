@@ -1,0 +1,33 @@
+test_malformed_actions_do_not_dispatch_tools (test_agent_app.AgentAppTests.test_malformed_actions_do_not_dispatch_tools) ... ok
+test_run_blocks_on_input_guard (test_agent_app.AgentAppTests.test_run_blocks_on_input_guard) ... ok
+test_run_handles_tool_and_returns_steps (test_agent_app.AgentAppTests.test_run_handles_tool_and_returns_steps) ... ok
+test_step_cap_accepts_only_one_to_three_integer_turns (test_agent_app.AgentAppTests.test_step_cap_accepts_only_one_to_three_integer_turns) ... ok
+test_main_routes_to_agent_track (test_entrypoint.EntrypointTests.test_main_routes_to_agent_track) ... ok
+test_main_routes_to_rag_track (test_entrypoint.EntrypointTests.test_main_routes_to_rag_track) ... ok
+test_agent_enters_real_calculator_and_keeps_steps (test_evaluation.EvaluationTests.test_agent_enters_real_calculator_and_keeps_steps) ... ok
+test_agent_invented_citation_rejected (test_evaluation.EvaluationTests.test_agent_invented_citation_rejected) ... ok
+test_agent_real_search_works_outside_project_directory (test_evaluation.EvaluationTests.test_agent_real_search_works_outside_project_directory) ... ok
+test_calculator_rejects_code_and_unbounded_computation (test_evaluation.EvaluationTests.test_calculator_rejects_code_and_unbounded_computation) ... ok
+test_input_guard_avoids_model (test_evaluation.EvaluationTests.test_input_guard_avoids_model) ... ok
+test_invalid_json_schema_and_transport_are_distinct (test_evaluation.EvaluationTests.test_invalid_json_schema_and_transport_are_distinct) ... ok
+test_live_path_blocked_before_dotenv_or_client (test_evaluation.EvaluationTests.test_live_path_blocked_before_dotenv_or_client) ... ok
+test_model_contract (test_evaluation.EvaluationTests.test_model_contract) ... ok
+test_rag_enters_dispatch_retrieves_and_logs (test_evaluation.EvaluationTests.test_rag_enters_dispatch_retrieves_and_logs) ... ok
+test_step_cap_is_real (test_evaluation.EvaluationTests.test_step_cap_is_real) ... ok
+test_unknown_citation_rejected (test_evaluation.EvaluationTests.test_unknown_citation_rejected) ... ok
+test_unknown_tool_is_not_executed (test_evaluation.EvaluationTests.test_unknown_tool_is_not_executed) ... ok
+test_case_contract_checks_event_calls_and_tool_result (test_metrics.MetricTests.test_case_contract_checks_event_calls_and_tool_result) ... ok
+test_case_coverage_detects_partial_and_duplicate_results (test_metrics.MetricTests.test_case_coverage_detects_partial_and_duplicate_results) ... ok
+test_defined_denominators_and_parse_failures (test_metrics.MetricTests.test_defined_denominators_and_parse_failures) ... ok
+test_evaluation_failure_is_not_counted_as_provider_failure (test_metrics.MetricTests.test_evaluation_failure_is_not_counted_as_provider_failure) ... ok
+test_provider_track_case_identity_retained (test_metrics.MetricTests.test_provider_track_case_identity_retained) ... ok
+test_tool_adherence_requires_real_trace_and_denominator (test_metrics.MetricTests.test_tool_adherence_requires_real_trace_and_denominator) ... ok
+test_transport_and_schema_do_not_count_as_safe_success (test_metrics.MetricTests.test_transport_and_schema_do_not_count_as_safe_success) ... ok
+test_run_blocks_on_input_guard (test_rag_app.RagAppTests.test_run_blocks_on_input_guard)
+Ensure disallowed prompts never reach the model. ... ok
+test_run_returns_valid_payload_when_model_is_ok (test_rag_app.RagAppTests.test_run_returns_valid_payload_when_model_is_ok) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.213s
+
+OK

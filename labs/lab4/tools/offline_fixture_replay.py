@@ -63,7 +63,7 @@ def run_guarded_child(args: argparse.Namespace, root: Path) -> int:
             "PATH": str(Path(sys.executable).parent) + os.pathsep + "/usr/bin:/bin",
             "HOME": home,
             "LANG": "C.UTF-8",
-            "PYTHONPATH": str(guard_dir),
+            "PYTHONPATH": os.pathsep.join([str(root), str(guard_dir)]),
             "PYTHONDONTWRITEBYTECODE": "1",
             "PYTHON_DOTENV_DISABLED": "1",
             "LLM_OFFLINE": "1",

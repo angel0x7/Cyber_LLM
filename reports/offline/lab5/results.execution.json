@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/home/kali/Cyber_LLM/.venv/node-v22.22.0-linux-x64/bin/node",
+    "/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/main.js",
+    "eval",
+    "-c",
+    "promptfooconfig_offline.yaml",
+    "-o",
+    "/home/kali/Cyber_LLM/reports/offline/lab5/results.json",
+    "--no-cache",
+    "--no-progress-bar"
+  ],
+  "cwd": "/tmp/llm-sec-promptfoo-6pcdly18/labs/lab5",
+  "exit_code": 0,
+  "network": "blocked by Python and Node guards",
+  "live_inference": "NOT RUN"
+}

@@ -1,0 +1,29 @@
+{
+  "provider": "openrouter",
+  "model_id": "deepseek/deepseek-v4.1-flash",
+  "requested_model": "deepseek/deepseek-v4.1-flash",
+  "timestamp": "2026-10-09T07:40:29.081447+00:00",
+  "environment_status": "PASS",
+  "credential_status": "PASS",
+  "connectivity_status": "PASS",
+  "model_status": "PASS",
+  "json_status": "PASS",
+  "security_case_status": "PASS",
+  "long_context_status": "NOT REQUESTED",
+  "tool_status": "NOT REQUESTED",
+  "returned_model": "deepseek/deepseek-v4.1-flash",
+  "serving_backend": "Crusoe",
+  "serving_backends": [
+    "CoreWeave",
+    "Together",
+    "Crusoe"
+  ],
+  "latency_seconds": 1.533751,
+  "prompt_tokens": 168,
+  "completion_tokens": 125,
+  "reasoning_tokens": 87,
+  "cost_usd": 0.00018606,
+  "finish_reason": "stop",
+  "CORE_READY": true,
+  "FULL_READY": false
+}

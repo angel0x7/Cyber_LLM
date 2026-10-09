@@ -3,11 +3,20 @@
 import argparse
 import json
 import os
+import re
 from pathlib import Path
 import shutil
 import subprocess
 import sys
 import tempfile
+
+
+def parse_version(output: str) -> str:
+    for line in output.splitlines():
+        candidate = line.strip()
+        if re.fullmatch(r"\d+\.\d+\.\d+", candidate):
+            return candidate
+    return output.strip()
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
@@ -31,8 +40,9 @@ def main():
         print('Incompatible local Node. This course requires Node 22.22.0.', file=sys.stderr)
         return 2
     promptfoo_version = subprocess.run([str(node), str(cli), '--version'], capture_output=True, text=True, check=False)
-    if promptfoo_version.returncode or promptfoo_version.stdout.strip() != '0.123.1':
-        print('Incompatible local Promptfoo. This course requires Promptfoo 0.123.1.', file=sys.stderr)
+    promptfoo_version_text = parse_version(promptfoo_version.stdout)
+    if promptfoo_version.returncode or promptfoo_version_text != '0.123.1':
+        print(f'Incompatible local Promptfoo. This course requires Promptfoo 0.123.1; detected {promptfoo_version_text or "no version"}.', file=sys.stderr)
         return 2
     work = Path(tempfile.mkdtemp(prefix='llm-sec-promptfoo-'))
     subject = work / args.subject

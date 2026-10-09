@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+course_llm/__init__.py
+course_llm/client.py
+llm_security_course_runtime.egg-info/PKG-INFO
+llm_security_course_runtime.egg-info/SOURCES.txt
+llm_security_course_runtime.egg-info/dependency_links.txt
+llm_security_course_runtime.egg-info/top_level.txt
+tests/test_course_llm.py
+tests/test_openrouter_adapter.py
+tests/test_provider_preflight.py

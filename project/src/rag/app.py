@@ -1,4 +1,5 @@
 import os, argparse, json
+import re
 from pathlib import Path
 from typing import Optional
 from dotenv import load_dotenv
@@ -33,24 +34,30 @@ def load_docs(folder: Path):
     return docs
 
 def retrieve(docs, query, k=3):
-    ids = [d[0] for d in docs]
-    corpus = [d[1] for d in docs]
-    if TfidfVectorizer is None or cosine_similarity is None:
-        query_terms = query.lower().split()
-        scored = []
-        for idx, doc in enumerate(corpus):
-            doc_lower = doc.lower()
-            score = sum(doc_lower.count(term) for term in query_terms)
-            scored.append((score, idx))
-        scored.sort(key=lambda item: item[0], reverse=True)
-        order = [idx for _, idx in scored[:k]]
-    else:
+    query_terms = [term for term in re.findall(r"[A-Za-z0-9]+", query.lower()) if term]
+    scored = []
+    for idx, (doc_id, text) in enumerate(docs):
+        text_lower = text.lower()
+        score = sum(text_lower.count(term) for term in query_terms)
+        if query.lower() in text_lower:
+            score += 10
+        scored.append((score, doc_id, text))
+
+    if TfidfVectorizer is not None and cosine_similarity is not None and docs:
+        ids = [doc_id for doc_id, _ in docs]
+        corpus = [text for _, text in docs]
         vec = TfidfVectorizer().fit(corpus + [query])
         X = vec.transform(corpus)
         q = vec.transform([query])
         sims = cosine_similarity(q, X).ravel()
-        order = sims.argsort()[::-1][:k]
-    return [(ids[i], corpus[i]) for i in order]
+        for idx, similarity in enumerate(sims):
+            scored[idx] = (scored[idx][0] + float(similarity), scored[idx][1], scored[idx][2])
+
+    scored.sort(key=lambda item: (-item[0], item[1]))
+    ranked = scored[:k]
+    if not any(score > 0 for score, _, _ in ranked):
+        ranked = scored[:k]
+    return [(doc_id, text) for _, doc_id, text in ranked]
 
 def build_prompt(query, evid):
     chunks = "\n\n".join([f"[{idx}] {text}" for idx, (_, text) in enumerate(evid, 1)])

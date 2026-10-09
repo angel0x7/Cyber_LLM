@@ -1,0 +1,42 @@
+test_160_unique_rotating_conditions (test_benchmark.BenchmarkTests.test_160_unique_rotating_conditions) ... ok
+test_backend_usage_cost_and_ceiling (test_benchmark.BenchmarkTests.test_backend_usage_cost_and_ceiling) ... ok
+test_endpoint_review_and_overrides (test_benchmark.BenchmarkTests.test_endpoint_review_and_overrides) ... ok
+test_exact_four_models (test_benchmark.BenchmarkTests.test_exact_four_models) ... ok
+test_failure_denominators_and_cost_per_benign (test_benchmark.BenchmarkTests.test_failure_denominators_and_cost_per_benign) ... ok
+test_four_model_wire_parity_and_identity (test_benchmark.BenchmarkTests.test_four_model_wire_parity_and_identity) ... ok
+test_frozen_hashes (test_benchmark.BenchmarkTests.test_frozen_hashes) ... ok
+test_global_cap_durable_before_dispatch (test_benchmark.BenchmarkTests.test_global_cap_durable_before_dispatch) ... ok
+test_invalid_global_budget_cli (test_benchmark.BenchmarkTests.test_invalid_global_budget_cli) ... usage: -c [-h] [--offline] [--smoke] [--resume] [--budget BUDGET]
+          [--prices PRICES] [--output OUTPUT]
+-c: error: Global budget must be finite and in (0, $5]
+usage: -c [-h] [--offline] [--smoke] [--resume] [--budget BUDGET]
+          [--prices PRICES] [--output OUTPUT]
+-c: error: Global budget must be finite and in (0, $5]
+usage: -c [-h] [--offline] [--smoke] [--resume] [--budget BUDGET]
+          [--prices PRICES] [--output OUTPUT]
+-c: error: Global budget must be finite and in (0, $5]
+usage: -c [-h] [--offline] [--smoke] [--resume] [--budget BUDGET]
+          [--prices PRICES] [--output OUTPUT]
+-c: error: Global budget must be finite and in (0, $5]
+usage: -c [-h] [--offline] [--smoke] [--resume] [--budget BUDGET]
+          [--prices PRICES] [--output OUTPUT]
+-c: error: Global budget must be finite and in (0, $5]
+ok
+test_mismatch_for_every_model (test_benchmark.BenchmarkTests.test_mismatch_for_every_model) ... ok
+test_original_result_schema (test_benchmark.BenchmarkTests.test_original_result_schema) ... ok
+test_partial_retry_billing_preserves_known_and_unknown_costs (test_benchmark.BenchmarkTests.test_partial_retry_billing_preserves_known_and_unknown_costs) ... ok
+test_pricing_invalid_ceiling (test_benchmark.BenchmarkTests.test_pricing_invalid_ceiling) ... ok
+test_pricing_stale_or_future_rejected (test_benchmark.BenchmarkTests.test_pricing_stale_or_future_rejected) ... ok
+test_reasoning_and_secret_excluded (test_benchmark.BenchmarkTests.test_reasoning_and_secret_excluded) ... ok
+test_receipt_recovers_completed_row_without_repay (test_benchmark.BenchmarkTests.test_receipt_recovers_completed_row_without_repay) ... ok
+test_resume_160_offline_and_no_model_differences (test_benchmark.BenchmarkTests.test_resume_160_offline_and_no_model_differences) ... ok
+test_same_application_corpus_schemas_and_policy (test_benchmark.BenchmarkTests.test_same_application_corpus_schemas_and_policy) ... ok
+test_same_bounded_truncation (test_benchmark.BenchmarkTests.test_same_bounded_truncation) ... ok
+test_smoke_rows_prioritized (test_benchmark.BenchmarkTests.test_smoke_rows_prioritized) ... ok
+test_uncertain_dispatch_skipped_preserving_reservation (test_benchmark.BenchmarkTests.test_uncertain_dispatch_skipped_preserving_reservation) ... ok
+test_unknown_billing_is_reserved (test_benchmark.BenchmarkTests.test_unknown_billing_is_reserved) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 50.138s
+
+OK

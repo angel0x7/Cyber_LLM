@@ -1,0 +1,5 @@
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")" && pwd)"
+export REPLAY_ENV="$ROOT_DIR/.venv"
+export COURSE_PYTHON="$REPLAY_ENV/bin/python"
+export PATH="$REPLAY_ENV/node-v22.22.0-linux-x64/bin:$REPLAY_ENV/bin:$PATH"
+export PROMPTFOO_CLI="$REPLAY_ENV/node-tools/node_modules/promptfoo/dist/src/main.js"

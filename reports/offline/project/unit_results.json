@@ -1,0 +1,23 @@
+{
+  "python": "3.13.12 (main, Feb  4 2026, 15:06:39) [GCC 15.2.0]",
+  "executable": "/home/kali/Cyber_LLM/.venv/bin/python",
+  "work_dir": "/tmp/llm-sec-offline-tests-62h6u4i3",
+  "source": "/home/kali/Cyber_LLM",
+  "suites": [
+    {
+      "tests_run": 27,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 0.2136,
+      "blocked_access_attempts": [],
+      "status": "PASS",
+      "suite": "project",
+      "exit_code": 0,
+      "log": "/home/kali/Cyber_LLM/reports/offline/project/unit_results-project.log"
+    }
+  ],
+  "tests_run": 27,
+  "status": "PASS",
+  "live_inference": "NOT RUN"
+}

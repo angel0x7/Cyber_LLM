@@ -1,0 +1,15 @@
+Wrote /tmp/tmpodfw7igy/checkov.json
+Wrote /tmp/tmpgqbgusz5/semgrep_after.json
+test_broken_scanner_report_is_not_success (test_local_scanners.LocalScannerTests.test_broken_scanner_report_is_not_success) ... ok
+test_local_only_command_targets (test_local_scanners.LocalScannerTests.test_local_only_command_targets) ... ok
+test_multiple_checkov_directory_documents_are_normalized (test_local_scanners.LocalScannerTests.test_multiple_checkov_directory_documents_are_normalized) ... ok
+test_remediation_is_separate_and_offline_blocked (test_local_scanners.LocalScannerTests.test_remediation_is_separate_and_offline_blocked) ... ok
+test_all_findings_and_resource_evidence_survive_compaction (test_remediation_payload.RemediationPayloadTests.test_all_findings_and_resource_evidence_survive_compaction) ... ok
+test_oversize_is_rejected_before_any_model_call (test_remediation_payload.RemediationPayloadTests.test_oversize_is_rejected_before_any_model_call) ... ok
+test_run_checkov_writes_expected_file (test_scripts.ScriptTests.test_run_checkov_writes_expected_file) ... ok
+test_run_semgrep_writes_after_file (test_scripts.ScriptTests.test_run_semgrep_writes_after_file) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.018s
+
+OK

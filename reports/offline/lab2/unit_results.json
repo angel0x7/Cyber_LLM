@@ -1,20 +1,20 @@
 {
-  "python": "3.14.7 (main, Aug 10 2026, 07:46:56) [GCC 16.1.1 20260728]",
-  "executable": "/home/angel/Documents/Cyber_IA/.venv/bin/python",
-  "work_dir": "/home/angel/.hermes/cache/scratch/llm-sec-offline-tests-k0tosc1_",
-  "source": "/home/angel/Documents/Cyber_IA",
+  "python": "3.13.12 (main, Feb  4 2026, 15:06:39) [GCC 15.2.0]",
+  "executable": "/home/kali/Cyber_LLM/.venv/bin/python",
+  "work_dir": "/tmp/llm-sec-offline-tests-jxw4gagm",
+  "source": "/home/kali/Cyber_LLM",
   "suites": [
     {
       "tests_run": 12,
       "failures": 0,
       "errors": 0,
       "skipped": 0,
-      "seconds": 0.0669,
+      "seconds": 0.2874,
       "blocked_access_attempts": [],
       "status": "PASS",
       "suite": "labs/lab2",
       "exit_code": 0,
-      "log": "/home/angel/Documents/Cyber_IA/reports/offline/lab2/unit_results-labs-lab2.log"
+      "log": "/home/kali/Cyber_LLM/reports/offline/lab2/unit_results-labs-lab2.log"
     }
   ],
   "tests_run": 12,

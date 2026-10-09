@@ -1,0 +1,34 @@
+{
+  "label": "SYNTHETIC_OFFLINE_FIXTURE_ONLY_NOT_MODEL_PERFORMANCE",
+  "purpose": "Exercise the real Lab 4 runner and metrics with a fixed local response.",
+  "interpretation": "Synthetic plumbing only; this is not model safety, refusal, or performance evidence.",
+  "model_inference": "NOT RUN",
+  "fixture_model_id": "offline-fixture",
+  "fixture_response": "{\"is_safe\":\"yes\",\"rationale\":\"Synthetic offline fixture; not model output.\"}",
+  "fixture_response_sha256": "4d3f6aca117b32271af8510b92e0a1d35b816fd3db654c255874b62442fb219d",
+  "provider_client": "FixtureOnlyClient; no SDK client constructed",
+  "network_guard": "tools/offline_guard/sitecustomize.py loaded through PYTHONPATH",
+  "dotenv": "PYTHON_DOTENV_DISABLED=1; .env excluded from temporary copy; no API key in child environment",
+  "attack_count": 47,
+  "attack_sha256": "761e6c9f9fc416d71c8a2ae5b58eb9ddeaac28f703fc1196333335e51ae35483",
+  "temporary_source_copy": "created for replay and removed after completion",
+  "sleep_seconds": 0,
+  "fixture_calls_by_mode": {
+    "unguarded": 47,
+    "guarded": 39
+  },
+  "rows_by_mode": {
+    "unguarded": {
+      "model_safe_decision": 47
+    },
+    "guarded": {
+      "locally_blocked": 8,
+      "model_safe_decision": 39
+    }
+  },
+  "outputs": {
+    "unguarded": "/home/kali/Cyber_LLM/reports/offline/lab4/lab4_fixture_unguarded.json",
+    "guarded": "/home/kali/Cyber_LLM/reports/offline/lab4/lab4_fixture_guarded.json"
+  },
+  "metrics": "/home/kali/Cyber_LLM/reports/offline/lab4/lab4_fixture_metrics.csv"
+}

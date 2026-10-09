@@ -1,0 +1,22 @@
+{
+  "provider": "openrouter",
+  "model_id": "deepseek/deepseek-v4.1-flash",
+  "returned_model_id": null,
+  "serving_backend": null,
+  "timestamp": "2026-10-09T19:31:12.123833+00:00",
+  "attempt": 1,
+  "case_id": "LLM05-A1:hardened",
+  "prompt_sha256": "bbb6151492661adb54245e5b3c4b142675a777463657e70f2432f39a734cb4d7",
+  "input_tokens": null,
+  "output_tokens": null,
+  "reasoning_tokens": null,
+  "cost_usd": null,
+  "budget_reserved_usd": 0.0046178999999999994,
+  "latency_seconds": 121.630941,
+  "category": "transport_error",
+  "truncated": null,
+  "model_refusal": null,
+  "http_status": null,
+  "finish_reason": null,
+  "request_id": null
+}

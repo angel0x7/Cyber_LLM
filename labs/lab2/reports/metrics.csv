@@ -1,0 +1,1321 @@
+provider_id,provider_label,model_id,prompt_id,prompt_idx,test_id,test_idx,expected,predicted,outcome,error_type,error,raw_output
+python:live_provider.py,course-llm-live,live_provider.py,64367ed8138313dac6eb515cdbe1d4890752fcd938bd9fbc456fa0fdad36b4dd,0,python/01_insecure_sql.py,0,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,dcc87425f72de214aa226c3d92de4ae20404e4136ec4cddbd147fa18af70dfea,1,python/01_insecure_sql.py,0,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,64367ed8138313dac6eb515cdbe1d4890752fcd938bd9fbc456fa0fdad36b4dd,0,python/02_safe_param.py,1,no,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,dcc87425f72de214aa226c3d92de4ae20404e4136ec4cddbd147fa18af70dfea,1,python/02_safe_param.py,1,no,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,64367ed8138313dac6eb515cdbe1d4890752fcd938bd9fbc456fa0fdad36b4dd,0,python/03_os_cmd.py,2,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,dcc87425f72de214aa226c3d92de4ae20404e4136ec4cddbd147fa18af70dfea,1,python/03_os_cmd.py,2,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,64367ed8138313dac6eb515cdbe1d4890752fcd938bd9fbc456fa0fdad36b4dd,0,python/04_os_cmd_safe.py,3,no,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,dcc87425f72de214aa226c3d92de4ae20404e4136ec4cddbd147fa18af70dfea,1,python/04_os_cmd_safe.py,3,no,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,64367ed8138313dac6eb515cdbe1d4890752fcd938bd9fbc456fa0fdad36b4dd,0,python/05_deser.py,4,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,dcc87425f72de214aa226c3d92de4ae20404e4136ec4cddbd147fa18af70dfea,1,python/05_deser.py,4,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,64367ed8138313dac6eb515cdbe1d4890752fcd938bd9fbc456fa0fdad36b4dd,0,python/06_hash.py,5,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,dcc87425f72de214aa226c3d92de4ae20404e4136ec4cddbd147fa18af70dfea,1,python/06_hash.py,5,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,64367ed8138313dac6eb515cdbe1d4890752fcd938bd9fbc456fa0fdad36b4dd,0,python/07_eval.py,6,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,dcc87425f72de214aa226c3d92de4ae20404e4136ec4cddbd147fa18af70dfea,1,python/07_eval.py,6,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,64367ed8138313dac6eb515cdbe1d4890752fcd938bd9fbc456fa0fdad36b4dd,0,python/08_eval_guard.py,7,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,dcc87425f72de214aa226c3d92de4ae20404e4136ec4cddbd147fa18af70dfea,1,python/08_eval_guard.py,7,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,64367ed8138313dac6eb515cdbe1d4890752fcd938bd9fbc456fa0fdad36b4dd,0,python/09_xss_flask.py,8,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,dcc87425f72de214aa226c3d92de4ae20404e4136ec4cddbd147fa18af70dfea,1,python/09_xss_flask.py,8,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,64367ed8138313dac6eb515cdbe1d4890752fcd938bd9fbc456fa0fdad36b4dd,0,python/10_xss_escape.py,9,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,dcc87425f72de214aa226c3d92de4ae20404e4136ec4cddbd147fa18af70dfea,1,python/10_xss_escape.py,9,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,64367ed8138313dac6eb515cdbe1d4890752fcd938bd9fbc456fa0fdad36b4dd,0,javascript/01_sql_concat.js,10,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,dcc87425f72de214aa226c3d92de4ae20404e4136ec4cddbd147fa18af70dfea,1,javascript/01_sql_concat.js,10,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,64367ed8138313dac6eb515cdbe1d4890752fcd938bd9fbc456fa0fdad36b4dd,0,javascript/02_sql_param.js,11,no,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,dcc87425f72de214aa226c3d92de4ae20404e4136ec4cddbd147fa18af70dfea,1,javascript/02_sql_param.js,11,no,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,64367ed8138313dac6eb515cdbe1d4890752fcd938bd9fbc456fa0fdad36b4dd,0,javascript/03_exec.js,12,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,dcc87425f72de214aa226c3d92de4ae20404e4136ec4cddbd147fa18af70dfea,1,javascript/03_exec.js,12,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,64367ed8138313dac6eb515cdbe1d4890752fcd938bd9fbc456fa0fdad36b4dd,0,javascript/04_exec_safe.js,13,no,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,dcc87425f72de214aa226c3d92de4ae20404e4136ec4cddbd147fa18af70dfea,1,javascript/04_exec_safe.js,13,no,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,64367ed8138313dac6eb515cdbe1d4890752fcd938bd9fbc456fa0fdad36b4dd,0,javascript/05_deser_yaml.js,14,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,dcc87425f72de214aa226c3d92de4ae20404e4136ec4cddbd147fa18af70dfea,1,javascript/05_deser_yaml.js,14,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,64367ed8138313dac6eb515cdbe1d4890752fcd938bd9fbc456fa0fdad36b4dd,0,javascript/06_crypto_md5.js,15,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,dcc87425f72de214aa226c3d92de4ae20404e4136ec4cddbd147fa18af70dfea,1,javascript/06_crypto_md5.js,15,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,64367ed8138313dac6eb515cdbe1d4890752fcd938bd9fbc456fa0fdad36b4dd,0,javascript/07_eval.js,16,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,dcc87425f72de214aa226c3d92de4ae20404e4136ec4cddbd147fa18af70dfea,1,javascript/07_eval.js,16,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,64367ed8138313dac6eb515cdbe1d4890752fcd938bd9fbc456fa0fdad36b4dd,0,javascript/08_template_xss.js,17,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,dcc87425f72de214aa226c3d92de4ae20404e4136ec4cddbd147fa18af70dfea,1,javascript/08_template_xss.js,17,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,64367ed8138313dac6eb515cdbe1d4890752fcd938bd9fbc456fa0fdad36b4dd,0,javascript/09_path_trav.js,18,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,dcc87425f72de214aa226c3d92de4ae20404e4136ec4cddbd147fa18af70dfea,1,javascript/09_path_trav.js,18,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,64367ed8138313dac6eb515cdbe1d4890752fcd938bd9fbc456fa0fdad36b4dd,0,javascript/10_path_safe.js,19,no,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,dcc87425f72de214aa226c3d92de4ae20404e4136ec4cddbd147fa18af70dfea,1,javascript/10_path_safe.js,19,no,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,64367ed8138313dac6eb515cdbe1d4890752fcd938bd9fbc456fa0fdad36b4dd,0,java/01_sql_concat.java,20,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,dcc87425f72de214aa226c3d92de4ae20404e4136ec4cddbd147fa18af70dfea,1,java/01_sql_concat.java,20,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,64367ed8138313dac6eb515cdbe1d4890752fcd938bd9fbc456fa0fdad36b4dd,0,java/02_sql_param.java,21,no,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,dcc87425f72de214aa226c3d92de4ae20404e4136ec4cddbd147fa18af70dfea,1,java/02_sql_param.java,21,no,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,64367ed8138313dac6eb515cdbe1d4890752fcd938bd9fbc456fa0fdad36b4dd,0,java/03_cmdi.java,22,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,dcc87425f72de214aa226c3d92de4ae20404e4136ec4cddbd147fa18af70dfea,1,java/03_cmdi.java,22,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,64367ed8138313dac6eb515cdbe1d4890752fcd938bd9fbc456fa0fdad36b4dd,0,java/04_deser.java,23,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,dcc87425f72de214aa226c3d92de4ae20404e4136ec4cddbd147fa18af70dfea,1,java/04_deser.java,23,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,64367ed8138313dac6eb515cdbe1d4890752fcd938bd9fbc456fa0fdad36b4dd,0,java/05_hash_md5.java,24,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,dcc87425f72de214aa226c3d92de4ae20404e4136ec4cddbd147fa18af70dfea,1,java/05_hash_md5.java,24,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,64367ed8138313dac6eb515cdbe1d4890752fcd938bd9fbc456fa0fdad36b4dd,0,java/06_xxe.java,25,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,dcc87425f72de214aa226c3d92de4ae20404e4136ec4cddbd147fa18af70dfea,1,java/06_xxe.java,25,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,64367ed8138313dac6eb515cdbe1d4890752fcd938bd9fbc456fa0fdad36b4dd,0,java/07_xxe_safe.java,26,no,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,dcc87425f72de214aa226c3d92de4ae20404e4136ec4cddbd147fa18af70dfea,1,java/07_xxe_safe.java,26,no,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,64367ed8138313dac6eb515cdbe1d4890752fcd938bd9fbc456fa0fdad36b4dd,0,java/08_xss_java.java,27,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,dcc87425f72de214aa226c3d92de4ae20404e4136ec4cddbd147fa18af70dfea,1,java/08_xss_java.java,27,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,64367ed8138313dac6eb515cdbe1d4890752fcd938bd9fbc456fa0fdad36b4dd,0,java/09_path_trav.java,28,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,dcc87425f72de214aa226c3d92de4ae20404e4136ec4cddbd147fa18af70dfea,1,java/09_path_trav.java,28,yes,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,64367ed8138313dac6eb515cdbe1d4890752fcd938bd9fbc456fa0fdad36b4dd,0,java/10_safe.java,29,no,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
+python:live_provider.py,course-llm-live,live_provider.py,dcc87425f72de214aa226c3d92de4ae20404e4136ec4cddbd147fa18af70dfea,1,java/10_safe.java,29,no,,TRANSPORT_ERROR,transport_error,"Error: Python error: No module named 'course_llm'
+Traceback (most recent call last):
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 409, in handle_call
+    result = _traced_call(method_callable, args, function_name)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 201, in _traced_call
+    return call_method(method_callable, args)
+  File ""/home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/python/persistent_wrapper.py"", line 178, in call_method
+    return method_callable(*args)
+  File ""/home/kali/Cyber_LLM/labs/lab2/live_provider.py"", line 40, in call_api
+    from course_llm.client import load_course_env as load_dotenv
+ModuleNotFoundError: No module named 'course_llm'
+
+    at PythonWorker.executeCall (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18150:41)
+    at async PythonWorker.call (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18102:11)
+    at async PythonProvider.executePythonScript (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/providers-BUaNtf-O.js:18591:19)
+    at async ProviderRateLimitState.executeWithRetry (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:646:20)
+    at async RateLimitRegistry.execute (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/shared-DYKPCo-p.js:875:19)
+    at async callActiveProvider (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7771:39)
+    at async callProviderForRunEval (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:7675:19)
+    at async file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8056:25
+    at async runEvalInternal (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:8132:22)
+    at async Evaluator.runEvalStepAfterBeforeEach (file:///home/kali/Cyber_LLM/.venv/node-tools/node_modules/promptfoo/dist/src/evaluator-DlYW7Rgb.js:9127:16)",
